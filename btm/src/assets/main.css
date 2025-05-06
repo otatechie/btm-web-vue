@@ -1,7 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Noto Sans", "sans-serif";
-  }
+    --font-sans: "Alexandria", "sans-serif";
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 300;
+    --font-weight-medium: 400;
+    --font-weight-semibold: 500;
+    --font-weight-bold: 600;
+    --font-weight-extrabold: 700;
+    --font-weight-black: 700;
+}
+
+@layer base {
+    html {
+        font-weight: var(--font-weight-normal);
+    }
+}
 
   

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Figtree", "sans-serif";
+    --font-sans: "Noto Sans", "sans-serif";
   }
+
+  

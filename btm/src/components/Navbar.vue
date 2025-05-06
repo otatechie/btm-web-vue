@@ -2,7 +2,7 @@
     <header class="bg-white fixed inset-x-0 top-0 z-50 shadow-lg transition-shadow duration-300">
         <nav class="flex items-center justify-between p-3 lg:px-12" aria-label="Global">
             <div class="flex lg:flex-1">
-                <a href="index.html" class="-m-1.5 p-1.5">
+                <a href="/" class="-m-1.5 p-1.5">
                     <span class="sr-only">BTM</span>
                     <img class="h-8 w-auto" src="/images/btm-logo.png" width="32" height="32" alt="BTM logo">
                 </a>
@@ -22,7 +22,7 @@
             <div class="hidden lg:flex lg:gap-x-16">
                 <a href="/about"
                     class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">About</a>
-                <a href="services.html"
+                <a href="/services"
                     class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Services</a>
                 <div class="relative" ref="brandsDropdownRef">
                     <button type="button"
@@ -53,8 +53,8 @@
                     class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Contact</router-link>
                 <a href="tour.html"
                     class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Tour</a>
-                <a href="login.html"
-                    class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Login</a>
+                <router-link to="/login"
+                    class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Login</router-link>
             </div>
         </nav>
         <!-- Mobile menu -->
@@ -102,7 +102,7 @@
                                 Marketplace</a>
                         </div>
                     </div>
-                    <a href="services.html"
+                    <a href="/services"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Services</a>
                     <router-link to="/contact"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Contact</router-link>

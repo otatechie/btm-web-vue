@@ -75,7 +75,7 @@
 
                         <div class="text-sm/6">
                             <a href="#"
-                                class="font-semibold text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">Forgot
+                                class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">Forgot
                                 password?</a>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
             <p class="mt-6 text-center text-sm/6 text-gray-500 dark:text-gray-400">
                 Not a member?
                 <a href="/signup"
-                    class="font-semibold text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">Create
+                    class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">Create
                     account here</a>
             </p>
         </div>

@@ -63,13 +63,12 @@ onMounted(() => {
                     <div class="mb-4 pb-3 border-b border-gray-100 flex items-center justify-between">
                         <div>
                             <h2 class="text-gray-800 font-semibold">Find Your Next Adventure</h2>
-                            <p class="text-gray-500 text-sm">Search flights, hotels, and more</p>
+                            <p class="text-gray-500 text-sm">Search flights and more</p>
                         </div>
                         <!-- Form Toggle Tabs -->
                         <div class="flex p-1 bg-gray-50/80 rounded-lg space-x-1 text-sm">
                             <button class="px-4 py-2 bg-blue-500 text-white rounded-md shadow-sm transition-all duration-200 hover:bg-blue-600 font-medium">Flights</button>
                             <button class="px-4 py-2 text-gray-600 hover:bg-white rounded-md transition-all duration-200">Hotels</button>
-                            <button class="px-4 py-2 text-gray-600 hover:bg-white rounded-md transition-all duration-200">Cars</button>
                         </div>
                     </div>
 

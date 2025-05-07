@@ -91,7 +91,7 @@
                                 d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
                         </svg>
                     </div>
-                    <div class="font-extrabold text-base text-gray-800 mb-1">Dedication</div>
+                    <div class="font-semibold text-base text-gray-800 mb-1">Dedication</div>
                     <div class="w-6 h-1 bg-gray-200 rounded-full mb-2"></div>
                     <div class="text-gray-500 text-center text-sm">We go extraordinary lengths to get our customers what
                         they want.</div>
@@ -108,7 +108,7 @@
                                 d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
                         </svg>
                     </div>
-                    <div class="font-extrabold text-base text-gray-800 mb-1">Consideration</div>
+                    <div class="font-semibold text-base text-gray-800 mb-1">Consideration</div>
                     <div class="w-6 h-1 bg-gray-200 rounded-full mb-2"></div>
                     <div class="text-gray-500 text-center text-sm">With an outstanding suite of products, we ensure
                         everyone is treated with care.</div>
@@ -123,7 +123,7 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </div>
-                    <div class="font-extrabold text-base text-gray-800 mb-1">Customer-Centricity</div>
+                    <div class="font-semibold text-base text-gray-800 mb-1">Customer-Centricity</div>
                     <div class="w-6 h-1 bg-gray-200 rounded-full mb-2"></div>
                     <div class="text-gray-500 text-center text-sm">We understand what modern, successful businesses
                         expect and deliver accordingly.</div>
@@ -138,7 +138,7 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </div>
-                    <div class="font-extrabold text-base text-gray-800 mb-1">Reliability</div>
+                    <div class="font-semibold text-base text-gray-800 mb-1">Reliability</div>
                     <div class="w-6 h-1 bg-gray-200 rounded-full mb-2"></div>
                     <div class="text-gray-500 text-center text-sm">Getting corporate travelers to where they want to be,
                         safely and on time.</div>
@@ -153,7 +153,7 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </div>
-                    <div class="font-extrabold text-base text-gray-800 mb-1">Trusted</div>
+                    <div class="font-semibold text-base text-gray-800 mb-1">Trusted</div>
                     <div class="w-6 h-1 bg-gray-200 rounded-full mb-2"></div>
                     <div class="text-gray-500 text-center text-sm">Trust us to seamlessly fit together the pieces of
                         your travel program.</div>
@@ -169,7 +169,7 @@
                                 d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 0 0 1.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0 0 15.75 7.5Z" />
                         </svg>
                     </div>
-                    <div class="font-extrabold text-base text-gray-800 mb-1">Adaptability</div>
+                    <div class="font-semibold text-base text-gray-800 mb-1">Adaptability</div>
                     <div class="w-6 h-1 bg-gray-200 rounded-full mb-2"></div>
                     <div class="text-gray-500 text-center text-sm">Providing flexible, user-friendly technologies to
                         streamline bookings and payments.</div>

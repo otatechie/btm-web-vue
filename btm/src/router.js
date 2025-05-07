@@ -5,13 +5,15 @@ import Contact from './pages/Contact.vue'
 import About from './pages/About.vue'
 import Services from './pages/Services.vue'
 import Login from './pages/Login.vue'
+import Tour from './pages/Tour.vue'
 
 const routes = [
     { path: '/', component: Home },
     { path: '/contact', component: Contact },
     { path: '/about', component: About },
     { path: '/services', component: Services },
-    { path: '/login', component: Login }
+    { path: '/login', component: Login },
+    { path: '/tour', component: Tour }
 ]
 
 const router = createRouter({

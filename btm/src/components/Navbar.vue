@@ -21,12 +21,12 @@
             </div>
             <div class="hidden lg:flex lg:gap-x-16">
                 <a href="/about"
-                    class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">About</a>
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">About</a>
                 <a href="/services"
-                    class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Services</a>
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Services</a>
                 <div class="relative" ref="brandsDropdownRef">
                     <button type="button"
-                        class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 flex items-center uppercase cursor-pointer"
+                        class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 flex items-center uppercase cursor-pointer"
                         @click="brandsDropdownOpen = !brandsDropdownOpen">
                         Our brands
                         <svg :class="['ml-2 h-4 w-4 fill-current transition-transform duration-300', { 'rotate-180': brandsDropdownOpen }]"
@@ -38,23 +38,23 @@
                     <div v-show="brandsDropdownOpen"
                         class="absolute mt-2 w-48 bg-white shadow-lg rounded-sm py-2 z-10 transform origin-top transition-all duration-300">
                         <a href="https://www.btmholidays.com/" target="_blank"
-                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 uppercase">BTM
+                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 uppercase font-medium">BTM
                             Holidays</a>
                         <a href="https://www.journeyeasy.net/Login" target="_blank"
-                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 uppercase">JourneyEasy</a>
+                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 uppercase font-medium">JourneyEasy</a>
                         <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 uppercase">TrekBuyFly</a>
+                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 uppercase font-medium">TrekBuyFly</a>
                         <a href="https://marketplace.btmlimited.net/" target="_blank"
-                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 uppercase">BTM
+                            class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 uppercase font-medium">BTM
                             Marketplace</a>
                     </div>
                 </div>
                 <router-link to="/contact"
-                    class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Contact</router-link>
-                <a href="tour.html"
-                    class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Tour</a>
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Contact</router-link>
+                    <router-link to="/tour"
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Tour</router-link>
                 <router-link to="/login"
-                    class="text-sm font-semibold leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Login</router-link>
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Login</router-link>
             </div>
         </nav>
         <!-- Mobile menu -->
@@ -106,10 +106,10 @@
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Services</a>
                     <router-link to="/contact"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Contact</router-link>
-                    <a href="tour.html"
-                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Tour</a>
-                    <a href="login.html"
-                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Login</a>
+                    <router-link to="/tour"
+                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Tour</router-link>
+                    <router-link to="/login"
+                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Login</router-link>
                 </div>
             </div>
         </div>

@@ -19,4 +19,34 @@
     }
 }
 
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 3rem;
+    background-color: #3b82f6; /* Tailwind blue-500 */
+    color: #fff;
+    font-weight: 400;
+    border-radius: 0.75rem; /* rounded-xl */
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(37,99,235,0.12);
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.btn-primary:hover {
+    background-color: #2563eb; /* Tailwind blue-600 */
+    box-shadow: 0 4px 16px 0 rgba(37,99,235,0.18);
+    transform: scale(1.02);
+}
+.btn-primary:active {
+    background-color: #1d4ed8; /* Tailwind blue-700 */
+}
+
   

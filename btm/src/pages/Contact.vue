@@ -1,10 +1,5 @@
-<script>
-import { ref } from 'vue'
-</script>
-
 <template>
     <section class="relative min-h-screen bg-neutral-50 fade-in">
-        <!-- Heading above overlay card -->
         <div class="w-full flex flex-col items-center pt-12 px-4">
             <div class="w-full max-w-3xl text-center my-12">
                 <h2 class="text-2xl md:text-3xl font-bold uppercase text-gray-700 mb-2 tracking-widest">Get in Touch,
@@ -15,15 +10,15 @@ import { ref } from 'vue'
                 <p class="mt-2 text-gray-500 font-semibold">Let us turn your travel dreams into reality!</p>
             </div>
         </div>
-        <!-- Overlay Card at the top -->
         <div class="w-full flex justify-center pb-10 px-4">
             <div class="w-full max-w-4xl">
-                <div
-                    class="flex flex-col md:flex-row bg-white rounded-md border border-gray-200 overflow-hidden divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                <section
+                    class="flex flex-col md:flex-row bg-white rounded-md border border-gray-200 overflow-hidden divide-y md:divide-y-0 md:divide-x divide-gray-100"
+                    aria-label="Contact Information">
                     <!-- Travel Support -->
-                    <div class="flex-1 flex flex-col items-start justify-center p-10 transition hover:bg-gray-50">
+                    <div class="flex-1 flex flex-col items-start justify-center p-10 transition hover:bg-gray-50"
+                        tabindex="0" role="region" aria-label="Travel Support">
                         <div class="flex items-center mb-2">
-                            <!-- Envelope Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -32,12 +27,14 @@ import { ref } from 'vue'
                             <span class="text-xs font-semibold uppercase text-gray-500 tracking-widest">Travel
                                 Support</span>
                         </div>
-                        <div class="text-gray-700 font-semibold text-md mb-1">info.gh@btmlimited.net</div>
+                        <a href="mailto:info.gh@btmlimited.net"
+                            class="text-gray-700 font-medium text-md mb-1 underline hover:text-blue-700"
+                            aria-label="Email Travel Support">info.gh@btmlimited.net</a>
                     </div>
                     <!-- Bookings & Inquiries -->
-                    <div class="flex-1 flex flex-col items-start justify-center p-10 transition hover:bg-gray-50">
+                    <div class="flex-1 flex flex-col items-start justify-center p-10 transition hover:bg-gray-50"
+                        tabindex="0" role="region" aria-label="Bookings and Inquiries">
                         <div class="flex items-center mb-2">
-                            <!-- Provided Icon for Bookings & Inquiries -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="h-5 w-5 text-blue-500 mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -46,16 +43,17 @@ import { ref } from 'vue'
                             <span class="text-xs font-semibold uppercase text-gray-500 tracking-widest">Bookings &
                                 Inquiries</span>
                         </div>
-                        <div class="text-blue-700 font-semibold text-md mb-1">
-                            <a href="tel:+233302743234"
-                                class="underline hover:text-blue-900">+233(0)-302-743-234</a><br>
-                            <a href="tel:+233303980144" class="underline hover:text-blue-900">+233(0)-303-980-144</a>
+                        <div class="text-blue-700 font-medium text-md mb-1">
+                            <a href="tel:+233302743234" class="underline hover:text-blue-900"
+                                aria-label="Call +233(0)-302-743-234">+233(0)-302-743-234</a><br>
+                            <a href="tel:+233303980144" class="underline hover:text-blue-900"
+                                aria-label="Call +233(0)-303-980-144">+233(0)-303-980-144</a>
                         </div>
                     </div>
                     <!-- Visit Us -->
-                    <div class="flex-1 flex flex-col items-start justify-center p-10 transition hover:bg-gray-50">
+                    <div class="flex-1 flex flex-col items-start justify-center p-10 transition hover:bg-gray-50"
+                        tabindex="0" role="region" aria-label="Visit Us">
                         <div class="flex items-center mb-2">
-                            <!-- Provided Icon for Visit Us -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="h-5 w-5 text-blue-500 mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -65,28 +63,25 @@ import { ref } from 'vue'
                             </svg>
                             <span class="text-xs font-semibold uppercase text-gray-500 tracking-widest">Visit Us</span>
                         </div>
-                        <div class="text-gray-700 font-semibold text-md mb-1">No. 6 H.P. Nyemetei<br>Osu, Accra</div>
+                        <address class="not-italic text-gray-700 font-medium text-md mb-1">No. 6 H.P. Nyemetei<br>Osu,
+                            Accra</address>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
-        <!-- Map below the card -->
         <div class="w-full flex justify-center pb-16 px-4">
             <div class="w-full max-w-4xl">
                 <div class="rounded-xl overflow-hidden border border-gray-200 shadow-md">
                     <iframe width="100%" height="400"
                         src="https://maps.google.com/maps?q=BTM%20Ghana%20Limited&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
                         frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                        class="w-full h-[400px] border-0" allowfullscreen></iframe>
+                        class="w-full h-[400px] border-0" allowfullscreen
+                        title="BTM Ghana Limited Location Map"></iframe>
                 </div>
             </div>
         </div>
     </section>
 </template>
-
-<script setup>
-// No logic needed
-</script>
 
 <style scoped>
 .fade-in {

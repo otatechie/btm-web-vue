@@ -235,12 +235,6 @@ onMounted(() => {
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-10 flex border-t border-gray-100">
-                            <router-link to="/about" class="group inline-flex items-center gap-2 text-base font-medium leading-7 text-blue-600 hover:text-blue-800 mt-5 transition-all duration-300" aria-label="Learn more about our company">
-                                Learn more about our company
-                                <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                            </router-link>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -20,10 +20,12 @@
                 </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-16">
-                <a href="/about"
-                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">About</a>
-                <a href="/services"
-                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Services</a>
+                <router-link to="/about"
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
+                    exact-active-class="!text-blue-600 font-bold">About</router-link>
+                <router-link to="/services"
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
+                    exact-active-class="!text-blue-600 font-bold">Services</router-link>
                 <div class="relative" ref="brandsDropdownRef">
                     <button type="button"
                         class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 flex items-center uppercase cursor-pointer"
@@ -50,11 +52,14 @@
                     </div>
                 </div>
                 <router-link to="/contact"
-                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Contact</router-link>
-                    <router-link to="/tour"
-                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Tour</router-link>
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
+                    exact-active-class="!text-blue-600 font-bold">Contact</router-link>
+                <router-link to="/tour"
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
+                    exact-active-class="!text-blue-600 font-bold">Tour</router-link>
                 <router-link to="/login"
-                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase">Login</router-link>
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
+                    exact-active-class="!text-blue-600 font-bold">Login</router-link>
             </div>
         </nav>
         <!-- Mobile menu -->
@@ -65,7 +70,8 @@
                     <span class="sr-only">BTM logo</span>
                     <img class="h-8 w-auto" src="/images/btm-logo.png" width="32" height="32" alt="BTM logo">
                 </a>
-                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400 cursor-pointer" @click="mobileMenuOpen = false">
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400 cursor-pointer"
+                    @click="mobileMenuOpen = false">
                     <span class="sr-only">Close menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000"
                         aria-hidden="true">
@@ -75,8 +81,9 @@
             </div>
             <div class="mt-6 flow-root">
                 <div class="space-y-2 py-6">
-                    <a href="/about"
-                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">About</a>
+                    <router-link to="/about"
+                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
+                        exact-active-class="!text-blue-600 font-bold">About</router-link>
                     <div>
                         <button type="button"
                             class="flex w-full items-center justify-between px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase cursor-pointer"
@@ -102,14 +109,18 @@
                                 Marketplace</a>
                         </div>
                     </div>
-                    <a href="/services"
-                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Services</a>
+                    <router-link to="/services"
+                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
+                        exact-active-class="!text-blue-600 font-bold">Services</router-link>
                     <router-link to="/contact"
-                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Contact</router-link>
+                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
+                        exact-active-class="!text-blue-600 font-bold">Contact</router-link>
                     <router-link to="/tour"
-                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Tour</router-link>
+                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
+                        exact-active-class="!text-blue-600 font-bold">Tour</router-link>
                     <router-link to="/login"
-                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase">Login</router-link>
+                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
+                        exact-active-class="!text-blue-600 font-bold">Login</router-link>
                 </div>
             </div>
         </div>
@@ -137,4 +148,3 @@ onBeforeUnmount(() => {
     document.removeEventListener('click', handleClickOutside)
 })
 </script>
-

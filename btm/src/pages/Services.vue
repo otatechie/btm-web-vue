@@ -4,8 +4,7 @@ const services = [
     { title: 'Visa Assistance & Consultation', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/visa.DC6nRem0.webp' },
     { title: 'Tourism Consultancy', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/okhcxc9uoak6kde39qsv' },
     { title: 'Hotel & Accommodation', image: '/_app/immutable/assets/hotel-accomodation.WQEVyR5m.webp' },
-    { title: 'Industrial Training', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/ykpnleajkaitlwue0wrf' },
-    { title: 'Airport Concierge', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/b0ytqemclwuu8vmxgl4x' },
+     { title: 'Airport Concierge', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/b0ytqemclwuu8vmxgl4x' },
     { title: 'Security & Escort Services', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/bbo82cpyhsqmpzm1n1k8' },
     { title: 'SMB Travel Club', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/services/cgvvvq6zbtyocchra185' },
     { title: 'Holidays & Tours', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/b4v8hgpiucqkfrm1rsjs' },
@@ -31,9 +30,9 @@ const services = [
             </div>
         </div>
         <div class="h-px bg-gray-200 max-w-7xl mx-auto px-6"></div>
-        <section class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8" aria-label="Service List">
+        <section class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8" id="services" aria-label="Service List">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <div v-for="service in services" :key="service.title"
+            <div v-for="service in services" :key="service.title"
                     class="relative rounded-xl overflow-hidden shadow-lg group h-64 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                     tabindex="0" role="listitem" :aria-label="service.title">
                     <img :src="service.image" :alt="service.title"
@@ -62,7 +61,7 @@ const services = [
                     <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Let us help you plan your perfect
                         trip. Contact us today to discuss your travel dreams.</p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="tel:+234163161009" class="btn-primary !w-auto !h-auto text-sm font-semibold"
+                        <a href="tel:+233302743234" class="btn-primary !w-auto !h-auto text-sm font-semibold"
                             style="color:#fff;" aria-label="Contact Us by Phone">Contact Us</a>
                         <a href="#services" class="text-sm font-semibold leading-6 text-white"
                             aria-label="Learn more about our services">Learn more <span aria-hidden="true">→</span></a>

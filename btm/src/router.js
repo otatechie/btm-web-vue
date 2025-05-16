@@ -6,6 +6,8 @@ import About from './pages/About.vue'
 import Services from './pages/Services.vue'
 import Login from './pages/Login.vue'
 import Tour from './pages/Tour.vue'
+import Privacy from './pages/Privacy.vue'
+import Terms from './pages/Terms.vue'
 
 const routes = [
     { 
@@ -37,6 +39,16 @@ const routes = [
         path: '/tour', 
         component: Tour,
         meta: { title: 'Tour Packages - BTM Ghana' }
+    },
+    {
+        path: '/privacy',
+        component: Privacy,
+        meta: { title: 'Privacy Policy - BTM Ghana' }
+    },
+    {
+        path: '/terms',
+        component: Terms,
+        meta: { title: 'Terms of Service - BTM Ghana' }
     }
 ]
 

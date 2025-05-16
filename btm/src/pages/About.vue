@@ -15,13 +15,13 @@
         <section class="w-full flex justify-center pb-10 px-4">
             <div class="w-full max-w-4xl">
                 <div class="flex flex-col md:flex-row gap-8 md:gap-12 mb-12">
-                    <p class="flex-1 min-w-[260px] text-gray-600 text-lg leading-relaxed">
+                    <p class="flex-1 min-w-[260px] text-gray-600 text-md leading-relaxed">
                         Business Travel Management (BTM) Limited, is a member of the GHI Assets ltd group which houses
                         several brands including but not limited to; Emirates Holidays, Sky Logistics Ltd and Rwandair.
                         BTM Ltd was incorporated in 1998, and is an ISO 8001:2015 accredited agent as well as being
                         accredited by I.A.T.A. (International Air Transport Association).
                     </p>
-                    <p class="flex-1 min-w-[260px] text-gray-600 text-lg leading-relaxed">
+                    <p class="flex-1 min-w-[260px] text-gray-600 text-md leading-relaxed">
                         In July 1999, the company which specialises in comprehensive travel management, corporate
                         services and logistics for businesses, became the top provider of corporate travel management,
                         B2B logistic solutions, and the pacesetter in the application of technology and innovative

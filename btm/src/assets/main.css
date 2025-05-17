@@ -1,16 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Alexandria", "sans-serif";
-    --font-weight-thin: 100;
-    --font-weight-extralight: 200;
-    --font-weight-light: 300;
-    --font-weight-normal: 300;
-    --font-weight-medium: 400;
-    --font-weight-semibold: 500;
-    --font-weight-bold: 600;
-    --font-weight-extrabold: 700;
-    --font-weight-black: 700;
+    --font-sans: "Noto Sans", "sans-serif";
 }
 
 @layer base {
@@ -26,12 +17,14 @@
     gap: 0.5rem;
     width: 100%;
     height: 3rem;
-    background-color: #3b82f6; /* Tailwind blue-500 */
+    background-color: #3b82f6;
+    /* Tailwind blue-500 */
     color: #fff;
     font-weight: 400;
-    border-radius: 0.75rem; /* rounded-xl */
+    border-radius: 0.75rem;
+    /* rounded-xl */
     transition: all 0.2s;
-    box-shadow: 0 2px 8px 0 rgba(37,99,235,0.12);
+    box-shadow: 0 2px 8px 0 rgba(37, 99, 235, 0.12);
     font-size: 0.9rem;
     border: none;
     cursor: pointer;
@@ -40,13 +33,15 @@
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
 }
+
 .btn-primary:hover {
-    background-color: #2563eb; /* Tailwind blue-600 */
-    box-shadow: 0 4px 16px 0 rgba(37,99,235,0.18);
+    background-color: #2563eb;
+    /* Tailwind blue-600 */
+    box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.18);
     transform: scale(1.02);
 }
-.btn-primary:active {
-    background-color: #1d4ed8; /* Tailwind blue-700 */
-}
 
-  
+.btn-primary:active {
+    background-color: #1d4ed8;
+    /* Tailwind blue-700 */
+}

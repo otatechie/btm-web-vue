@@ -60,25 +60,25 @@ const handleGoogleSignIn = () => {
 </script>
 
 <template>
-    <div class="flex min-h-full flex-col justify-center py-8 sm:px-6 lg:px-8">
+    <main class="flex min-h-full flex-col justify-center py-8 sm:px-6 lg:px-8" role="main">
         <div class="sm:mx-auto sm:w-full sm:max-w-md mt-12">
-            <h2 class="text-center text-2xl/9 font-bold tracking-tight text-gray-900 dark:text-white">Sign in to your
-                account</h2>
+            <h1 class="text-center text-2xl/9 font-bold tracking-tight text-gray-900 dark:text-white">Sign in to your
+                account</h1>
         </div>
         <div class="my-6 sm:mx-auto sm:w-full sm:max-w-[400px]">
             <div class="bg-white dark:bg-gray-900 px-6 py-8 shadow-sm sm:rounded-lg sm:px-12">
-                <form @submit.prevent="handleSubmit" class="space-y-4">
+                <form @submit.prevent="handleSubmit" class="space-y-4" role="form" aria-label="Sign in form">
                     <div>
                         <label for="email" class="block text-sm/6 font-medium text-gray-900 dark:text-gray-200">Email
                             address</label>
                         <div class="mt-1">
                             <input v-model="form.email" @blur="validateEmail"
                                 :class="{ 'outline-red-500': errors.email }" type="email" name="email" id="email"
-                                autocomplete="email" required
-                                class="block w-full rounded-md bg-white dark:bg-gray-800 px-3 py-1.5 text-base text-gray-900 dark:text-white outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-600 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
-                                aria-describedby="email-error">
-                            <p v-if="errors.email" id="email-error" class="mt-1 text-sm text-red-600">{{ errors.email }}
-                            </p>
+                                autocomplete="email" required aria-required="true" aria-invalid="!!errors.email"
+                                aria-describedby="email-error"
+                                class="block w-full rounded-md bg-white dark:bg-gray-800 px-3 py-1.5 text-base text-gray-900 dark:text-white outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-600 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6">
+                            <p v-if="errors.email" id="email-error" class="mt-1 text-sm text-red-600" role="alert">{{
+                                errors.email }}</p>
                         </div>
                     </div>
                     <div>
@@ -88,21 +88,22 @@ const handleGoogleSignIn = () => {
                             <input v-model="form.password" @blur="validatePassword"
                                 :type="showPassword ? 'text' : 'password'"
                                 :class="{ 'outline-red-500': errors.password }" name="password" id="password"
-                                autocomplete="current-password" required
-                                class="block w-full rounded-md bg-white dark:bg-gray-800 px-3 py-1.5 text-base text-gray-900 dark:text-white outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-600 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
-                                aria-describedby="password-error">
+                                autocomplete="current-password" required aria-required="true"
+                                aria-invalid="!!errors.password" aria-describedby="password-error"
+                                class="block w-full rounded-md bg-white dark:bg-gray-800 px-3 py-1.5 text-base text-gray-900 dark:text-white outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-600 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6">
                             <button type="button" @click="showPassword = !showPassword"
                                 class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
-                                :aria-label="showPassword ? 'Hide password' : 'Show password'">
+                                :aria-label="showPassword ? 'Hide password' : 'Show password'"
+                                :aria-pressed="showPassword">
                                 <svg v-if="showPassword" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                    viewBox="0 0 20 20" fill="currentColor">
+                                    viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                                     <path fill-rule="evenodd"
                                         d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
                                         clip-rule="evenodd" />
                                 </svg>
                                 <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                    fill="currentColor">
+                                    fill="currentColor" aria-hidden="true">
                                     <path fill-rule="evenodd"
                                         d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z"
                                         clip-rule="evenodd" />
@@ -110,8 +111,8 @@ const handleGoogleSignIn = () => {
                                         d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z" />
                                 </svg>
                             </button>
-                            <p v-if="errors.password" id="password-error" class="mt-1 text-sm text-red-600">{{
-                                errors.password }}</p>
+                            <p v-if="errors.password" id="password-error" class="mt-1 text-sm text-red-600"
+                                role="alert">{{ errors.password }}</p>
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
@@ -119,9 +120,10 @@ const handleGoogleSignIn = () => {
                             <div class="flex h-6 shrink-0 items-center">
                                 <div class="group grid size-4 grid-cols-1">
                                     <input v-model="form.rememberMe" id="remember-me" name="remember-me" type="checkbox"
+                                        aria-label="Remember me"
                                         class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white dark:bg-gray-800 checked:border-blue-600 checked:bg-blue-600 indeterminate:border-blue-600 indeterminate:bg-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
                                     <svg class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
-                                        viewBox="0 0 14 14" fill="none">
+                                        viewBox="0 0 14 14" fill="none" aria-hidden="true">
                                         <path class="opacity-0 group-has-checked:opacity-100" d="M3 8L6 11L11 3.5"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         <path class="opacity-0 group-has-indeterminate:opacity-100" d="M3 7H11"
@@ -134,14 +136,15 @@ const handleGoogleSignIn = () => {
                         </div>
                         <div class="text-sm/6">
                             <a href="#"
-                                class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">Forgot
-                                password?</a>
+                                class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+                                aria-label="Forgot password?">Forgot password?</a>
                         </div>
                     </div>
                     <div>
-                        <button type="submit" :disabled="isSubmitting" class="btn-primary" aria-label="Sign in">
+                        <button type="submit" :disabled="isSubmitting" class="btn-primary" aria-label="Sign in"
+                            :aria-busy="isSubmitting">
                             <svg v-if="isSubmitting" class="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
                                     stroke-width="4"></circle>
                                 <path class="opacity-75" fill="currentColor"
@@ -164,7 +167,8 @@ const handleGoogleSignIn = () => {
                     </div>
                     <div class="mt-4">
                         <button @click="handleGoogleSignIn"
-                            class="flex w-full items-center justify-center gap-3 rounded-md bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-white shadow-xs ring-1 ring-gray-300 dark:ring-gray-700 ring-inset hover:bg-gray-50 dark:hover:bg-gray-700 focus-visible:ring-transparent">
+                            class="flex w-full items-center justify-center gap-3 rounded-md bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-white shadow-xs ring-1 ring-gray-300 dark:ring-gray-700 ring-inset hover:bg-gray-50 dark:hover:bg-gray-700 focus-visible:ring-transparent"
+                            aria-label="Sign in with Google">
                             <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
                                     d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z"
@@ -186,10 +190,10 @@ const handleGoogleSignIn = () => {
                 <p class="mt-6 text-center text-sm/6 text-gray-500 dark:text-gray-400">
                     Not a member?
                     <a href="/signup"
-                        class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">Create
-                        account here</a>
+                        class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+                        aria-label="Create account">Create account here</a>
                 </p>
             </div>
         </div>
-    </div>
+    </main>
 </template>

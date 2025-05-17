@@ -1,8 +1,9 @@
 <template>
     <main class="relative min-h-screen bg-neutral-50 fade-in">
-        <section class="w-full flex flex-col items-center pt-12 px-4">
+        <section class="w-full flex flex-col items-center pt-12 px-4" aria-labelledby="about-heading">
             <header class="w-full max-w-3xl text-center my-12">
-                <h1 class="text-2xl md:text-3xl font-bold uppercase text-gray-700 mb-2 tracking-widest">We Take Care Of
+                <h1 id="about-heading"
+                    class="text-2xl md:text-3xl font-bold uppercase text-gray-700 mb-2 tracking-widest">We Take Care Of
                     Your Travel Needs</h1>
                 <div class="w-16 h-0.5 bg-blue-500 mx-auto mb-4" aria-hidden="true"></div>
                 <p class="mt-2 text-base text-gray-500">Who we are</p>
@@ -12,7 +13,7 @@
                 class="aspect-[9/4] w-full max-w-4xl object-cover rounded-lg shadow-md border border-gray-200 mx-auto mb-12" />
         </section>
 
-        <section class="w-full flex justify-center pb-10 px-4">
+        <section class="w-full flex justify-center pb-10 px-4" aria-labelledby="company-info">
             <div class="w-full max-w-4xl">
                 <div class="flex flex-col md:flex-row gap-8 md:gap-12 mb-12">
                     <p class="flex-1 min-w-[260px] text-gray-600 text-md leading-relaxed">
@@ -60,8 +61,9 @@
             </div>
         </section>
 
-        <section class="mt-16 mb-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-2 tracking-tight">Our Values</h2>
+        <section class="mt-16 mb-10" aria-labelledby="values-heading">
+            <h2 id="values-heading"
+                class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-2 tracking-tight">Our Values</h2>
             <p class="text-center text-lg text-gray-500 mb-10 max-w-2xl mx-auto">
                 The guiding principles that shape our culture and drive our actions define who we are, how we work, and
                 what we stand for.
@@ -70,7 +72,8 @@
                 <div class="flex gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-1 sm:px-2" role="list"
                     aria-label="Company values">
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200">
+                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -85,7 +88,8 @@
                             what they want.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200">
+                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -103,7 +107,8 @@
                             everyone is treated with care.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200">
+                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -119,7 +124,8 @@
                             expect and deliver accordingly.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200">
+                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -135,7 +141,8 @@
                             be, safely and on time.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200">
+                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -151,7 +158,8 @@
                             your travel program.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200">
+                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -171,10 +179,11 @@
             </div>
         </section>
 
-        <section class="bg-white py-16">
+        <section class="bg-white py-16" aria-labelledby="leadership-heading">
             <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
                 <div class="max-w-2xl">
-                    <h2 class="text-3xl font-semibold font-display tracking-tight text-gray-800 sm:text-4xl">Our
+                    <h2 id="leadership-heading"
+                        class="text-3xl font-semibold font-display tracking-tight text-gray-800 sm:text-4xl">Our
                         leadership</h2>
                     <p class="mt-3 text-md leading-6 text-gray-500">Meet the team driving our success.</p>
                 </div>
@@ -186,7 +195,7 @@
                                 height="80" src="https://www.btmghana.net/_app/immutable/assets/sam.CxmMj7m5.png"
                                 alt="Sam Cookey" />
                             <div>
-                                <h3 class="text-base font-medium leading-7 tracking-tight text-gray-800">Mr Sam Cookey
+                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mr Sam Cookey
                                     Jr</h3>
                                 <p class="text-sm font-medium leading-6 text-gray-500">Chairman</p>
                             </div>
@@ -198,7 +207,7 @@
                                 height="80" src="https://www.btmghana.net/_app/immutable/assets/bola.BoQxM2lb.png"
                                 alt="Bola Adefobe" />
                             <div>
-                                <h3 class="text-base font-medium leading-7 tracking-tight text-gray-800">Mrs Bola
+                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mrs Bola
                                     Adefope</h3>
                                 <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
                             </div>
@@ -210,7 +219,7 @@
                                 src="https://www.btmghana.net/_app/immutable/assets/olufemi.rqbt3-R0.png" width="80"
                                 height="80" alt="Olufemi Adefope" />
                             <div>
-                                <h3 class="text-base font-medium leading-7 tracking-tight text-gray-800">Mr Olufemi
+                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mr Olufemi
                                     Adefope</h3>
                                 <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
                             </div>
@@ -222,7 +231,7 @@
                                 src="https://www.btmghana.net/_app/immutable/assets/bolanle.DRDNsvWt.jpg" width="80"
                                 height="80" alt="Bolanle Oluwayemisi Adeniji" />
                             <div>
-                                <h3 class="text-base font-medium leading-7 tracking-tight text-gray-800">Ms. Bolanle
+                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Ms. Bolanle
                                     Oluwayemisi Adeniji</h3>
                                 <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
                             </div>
@@ -234,7 +243,7 @@
                                 src="https://www.btmghana.net/_app/immutable/assets/chioma.Cu3G18tJ.png" width="80"
                                 height="80" alt="Chioma Nweke" />
                             <div>
-                                <h3 class="text-base font-medium leading-7 tracking-tight text-gray-800">Mrs Chioma
+                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mrs Chioma
                                     Nweke</h3>
                                 <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
                             </div>
@@ -246,7 +255,7 @@
                                 src="https://www.btmghana.net/_app/immutable/assets/ademola.DRMQHCpI.png" width="80"
                                 height="80" alt="Ademola Adefarasin" />
                             <div>
-                                <h3 class="text-base font-medium leading-7 tracking-tight text-gray-800">Mr. Ademola
+                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mr. Ademola
                                     Adefarasin</h3>
                                 <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
                             </div>
@@ -258,7 +267,7 @@
                                 src="https://www.btmghana.net/_app/immutable/assets/lola.BNJGfSIO.jpg" width="80"
                                 height="80" alt="Lola Adefope" />
                             <div>
-                                <h3 class="text-base font-medium leading-7 tracking-tight text-gray-800">Ms. Lola
+                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Ms. Lola
                                     Adefope</h3>
                                 <p class="text-sm font-medium leading-6 text-gray-500">Managing Director</p>
                             </div>

@@ -12,10 +12,10 @@ const serviceHeadings = {
 };
 
 const serviceImages = {
-    'BTM Visa Assistance & Consultation Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/epqfsjnwqzzgrjfgog1i',
+    'BTM Visa Assistance & Consultation Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/visa.DC6nRem0.webp',
     'Tourism Consultancy Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/okhcxc9uoak6kde39qsv',
     'Hotel Booking Services': '/_app/immutable/assets/hotel-accomodation.WQEVyR5m.webp',
-    'Consultancy Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/visa.DC6nRem0.webp',
+    'Consultancy Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/epqfsjnwqzzgrjfgog1i',
     'Airport Concierge & Transfer Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/b0ytqemclwuu8vmxgl4x',
     'Travel Advisory Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/bbo82cpyhsqmpzm1n1k8',
     'Group Travel & Airline Seat Blocking': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/psexhvqza7xhlgnqxeiq',
@@ -51,47 +51,46 @@ function closeModal() {
 </script>
 
 <template>
-    <section class="relative min-h-screen bg-gradient-to-b from-neutral-50 to-white fade-in">
+    <main class="relative min-h-screen bg-gradient-to-b from-neutral-50 to-white fade-in">
         <div class="w-full flex flex-col items-center pt-12 px-4">
             <div class="w-full max-w-3xl text-center my-12">
-                <h2 class="text-2xl md:text-3xl font-bold uppercase text-gray-700 mb-2 tracking-widest">Discover Our
-                    Travel Services</h2>
-                <div class="w-16 h-0.5 bg-blue-500 mx-auto mb-4"></div>
+                <h1 class="text-2xl md:text-3xl font-bold uppercase text-gray-700 mb-2 tracking-widest">Discover Our
+                    Travel Services</h1>
+                <div class="w-16 h-0.5 bg-blue-500 mx-auto mb-4" aria-hidden="true"></div>
                 <p class="mt-2 text-base text-gray-500">Explore our array of services, including luxury accommodations,
                     seamless transportation arrangements, and expertly guided tours, whether you're dreaming of a
                     relaxing beach getaway, a cultural immersion, or a thrilling escapade.</p>
             </div>
         </div>
-        <div class="h-px bg-gray-200 max-w-7xl mx-auto px-6"></div>
-        <section class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8" id="services" aria-label="Service List">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <div v-for="service in services.filter(s => serviceHeadings[s.title])" :key="service.title"
-                    class="relative rounded-xl overflow-hidden shadow-lg group h-64 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                    tabindex="0" role="listitem" :aria-label="serviceHeadings[service.title]"
-                    @click="openModal(service)">
-                    <img :src="service.image" :alt="serviceHeadings[service.title]"
+        <div class="h-px bg-gray-200 max-w-7xl mx-auto px-6" aria-hidden="true"></div>
+        <section class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8" id="services" aria-labelledby="services-heading">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" role="list">
+                <div v-for="service in services" :key="service.title"
+                    class="relative rounded-xl overflow-hidden shadow-lg group h-64 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                    tabindex="0" role="listitem" :aria-label="service.title" @click="openModal(service)"
+                    @keydown.enter="openModal(service)">
+                    <img :src="service.image" :alt="service.title"
                         class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
+                        aria-hidden="true">
                     </div>
                     <div
                         class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                        <h3 class="text-md font-semibold text-white drop-shadow-lg mb-2">{{
-                            serviceHeadings[service.title] }}</h3>
-                        <div
-                            class="h-0.5 w-12 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left">
+                        <h3 class="text-md font-semibold text-white drop-shadow-lg mb-2">{{ service.title }}</h3>
+                        <div class="h-0.5 w-12 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+                            aria-hidden="true">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="bg-gray-50 border-t border-gray-100" aria-label="Contact and Learn More">
+        <section class="bg-gray-50 border-t border-gray-100" aria-labelledby="cta-heading">
             <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
                 <div
                     class="relative isolate overflow-hidden bg-gray-900 px-6 py-16 text-center shadow-xl rounded-xl sm:px-16">
-                    <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to
+                    <h2 id="cta-heading"
+                        class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to
                         Start Your Journey?</h2>
                     <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Let us help you plan your perfect
                         trip. Contact us today to discuss your travel dreams.</p>
@@ -105,36 +104,35 @@ function closeModal() {
             </div>
         </section>
 
-        <!-- Modal -->
         <div v-if="showModal"
-            class="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-xs transition-opacity duration-300">
+            class="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-xs transition-opacity duration-300"
+            role="dialog" aria-modal="true"
+            :aria-labelledby="selectedService ? `modal-title-${selectedService.title}` : 'modal-title'">
             <div class="relative w-full max-w-lg mx-auto bg-white shadow-2xl rounded-xl p-0 sm:p-0 animate-modal-in">
-                <!-- Close Button -->
                 <button
-                    class="absolute top-2 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-500 text-2xl font-medium shadow transition cursor-pointer"
-                    @click="closeModal" aria-label="Close">
-                    &times;
-                </button>
-                <!-- Modal Content -->
+                    class="absolute top-2 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-500 text-2xl font-medium shadow transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                    @click="closeModal" aria-label="Close modal">&times;</button>
                 <div class="p-6 sm:p-8 max-h-[70vh] overflow-y-auto">
                     <img v-if="selectedService?.image" :src="selectedService.image" :alt="selectedService.title"
                         class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-100 shadow" />
-                    <h2 class="text-2xl font-semibold mb-2 text-gray-800 tracking-tight">
+                    <h2 :id="selectedService ? `modal-title-${selectedService.title}` : 'modal-title'"
+                        class="text-xl font-semibold mb-2 text-gray-800 tracking-tight">
                         {{ serviceHeadings[selectedService?.title] || selectedService?.title }}
                     </h2>
                     <p class="text-gray-600 text-sm leading-relaxed whitespace-pre-line mb-4">
                         {{ serviceDescriptions[selectedService?.title] || `More details about ${selectedService?.title}
                         will go here.` }}
                     </p>
-                    <div class="h-px bg-gray-100 max-w-7xl mx-auto px-6"></div>
+                    <div class="h-px bg-gray-100 max-w-7xl mx-auto px-6" aria-hidden="true"></div>
                     <div class="mt-6 flex justify-end">
-                        <button class="btn-primary !w-auto !h-auto px-8 py-3 text-base font-semibold"
+                        <button
+                            class="btn-primary !w-auto !h-auto px-8 py-3 text-base font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                             aria-label="Book Now">Book Now</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 </template>
 
 <style scoped>

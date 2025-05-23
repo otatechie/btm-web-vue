@@ -44,7 +44,11 @@ onBeforeUnmount(() => {
                     </svg>
                 </button>
             </div>
-            <div class="hidden lg:flex lg:gap-x-16" role="menubar">
+            <div class="hidden lg:flex lg:gap-x-12" role="menubar">
+                <router-link to="/"
+                    class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
+                    exact-active-class="!text-blue-600 font-bold" role="menuitem"
+                    aria-current="page">Home</router-link>
                 <router-link to="/about"
                     class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
                     exact-active-class="!text-blue-600 font-bold" role="menuitem"
@@ -115,6 +119,10 @@ onBeforeUnmount(() => {
             </div>
             <div class="mt-6 flow-root">
                 <div class="space-y-2 py-6" role="menu" aria-label="Mobile navigation">
+                    <router-link to="/"
+                        class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
+                        exact-active-class="!text-blue-600 font-bold" role="menuitem"
+                        aria-current="page">Home</router-link>
                     <router-link to="/about"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"

@@ -97,8 +97,8 @@ function closeModal() {
                     <div class="mt-10 flex items-center justify-center gap-x-6">
                         <a href="tel:+233302743234" class="btn-primary !w-auto !h-auto text-sm font-semibold"
                             style="color:#fff;" aria-label="Contact Us by Phone">Contact Us</a>
-                        <a href="#services" class="text-sm font-semibold leading-6 text-white"
-                            aria-label="Learn more about our services">Learn more <span aria-hidden="true">→</span></a>
+                        <a href="mailto:info.gh@btmlimited.net" class="text-sm font-semibold leading-6 text-white"
+                            aria-label="Email us at info.gh@btmlimited.net">Send us an email <span aria-hidden="true">→</span></a>
                     </div>
                 </div>
             </div>

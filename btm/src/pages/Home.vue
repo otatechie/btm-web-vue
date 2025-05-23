@@ -254,7 +254,7 @@ onMounted(() => {
                     <div class="flex justify-center mt-6">
                         <a href="#"
                             class="btn-primary !w-auto !h-auto px-8 py-3 text-base font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                            aria-label="View all services">View All Services</a>
+                            aria-label="View all services">View all our services</a>
                     </div>
                 </div>
             </div>

@@ -69,10 +69,10 @@
                 what we stand for.
             </p>
             <div class="overflow-x-auto pb-4">
-                <div class="flex gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-1 sm:px-2" role="list"
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-1 sm:px-2 gap-4" role="list"
                     aria-label="Company values">
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        class="bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
                         tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
@@ -88,7 +88,7 @@
                             what they want.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        class="bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
                         tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
@@ -107,7 +107,7 @@
                             everyone is treated with care.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        class="bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
                         tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
@@ -124,7 +124,7 @@
                             expect and deliver accordingly.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        class="bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
                         tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
@@ -141,7 +141,7 @@
                             be, safely and on time.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        class="bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
                         tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">
@@ -158,7 +158,7 @@
                             your travel program.</p>
                     </article>
                     <article
-                        class="min-w-[200px] bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
+                        class="bg-white rounded-lg p-6 flex flex-col items-center border border-gray-200 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2"
                         tabindex="0">
                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-50 mb-3"
                             aria-hidden="true">

@@ -104,7 +104,7 @@ const features = [
                     <a href="/tours/package/create"
                         class="group relative inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-[#3b82f6] hover:bg-[#2563eb] rounded-lg overflow-hidden transition-all duration-300 shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                         aria-label="Start your journey by creating a tour package">
-                        <span class="relative z-10">Start Your Journey</span>
+                        <span class="relative z-10">Create your own package</span>
                         <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -207,16 +207,6 @@ const features = [
                                     <span class="text-gray-300" aria-hidden="true">•</span>
                                     <span class="text-xs text-gray-500">{{ destination.tags[1] }}</span>
                                 </div>
-                                <a :href="destination.link"
-                                    class="text-[#2563eb] hover:text-[#1d4ed8] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
-                                    :aria-label="`Explore ${destination.title}`">
-                                    Explore
-                                    <svg class="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg>
-                                </a>
                             </div>
                         </div>
                     </article>

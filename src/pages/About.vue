@@ -8,9 +8,6 @@
                 <div class="w-16 h-0.5 bg-blue-500 mx-auto mb-4" aria-hidden="true"></div>
                 <p class="mt-2 text-base text-gray-500">Who we are</p>
             </header>
-            <img src="https://www.btmghana.net/_app/immutable/assets/about-hero._DAhNCn_.webp"
-                alt="A group of black women sitting in an office having a meeting."
-                class="aspect-[9/4] w-full max-w-4xl object-cover rounded-lg shadow-md border border-gray-200 mx-auto mb-12" />
         </section>
 
         <section class="w-full flex justify-center pb-10 px-4" aria-labelledby="company-info">
@@ -31,37 +28,14 @@
                     </p>
                 </div>
 
-                <div class="w-full flex justify-center mb-10">
+                <div class="w-full flex justify-center mb-6">
                     <div class="w-2/3 h-0.5 bg-gradient-to-r from-blue-200 via-gray-200 to-green-200 rounded-full"
                         aria-hidden="true"></div>
-                </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-4" role="list" aria-label="Company statistics">
-                    <div class="text-center" role="listitem">
-                        <div class="text-3xl mb-2" aria-hidden="true">🏢</div>
-                        <div class="text-2xl md:text-2xl font-semibold text-gray-800 mb-1">1998</div>
-                        <div class="text-sm text-gray-600">Business was founded</div>
-                    </div>
-                    <div class="text-center" role="listitem">
-                        <div class="text-3xl mb-2" aria-hidden="true">👥</div>
-                        <div class="text-2xl md:text-2xl font-semibold text-gray-800 mb-1">120+</div>
-                        <div class="text-sm text-gray-600">People on the team</div>
-                    </div>
-                    <div class="text-center" role="listitem">
-                        <div class="text-3xl mb-2" aria-hidden="true">🌍</div>
-                        <div class="text-2xl md:text-2xl font-semibold text-gray-800 mb-1">250k</div>
-                        <div class="text-sm text-gray-600">Users on the platform</div>
-                    </div>
-                    <div class="text-center" role="listitem">
-                        <div class="text-3xl mb-2" aria-hidden="true">🏆</div>
-                        <div class="text-2xl md:text-2xl font-semibold text-gray-800 mb-1">7+</div>
-                        <div class="text-sm text-gray-600">World travel awards</div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mt-16 mb-10" aria-labelledby="values-heading">
+        <section class="mb-10" aria-labelledby="values-heading">
             <h2 id="values-heading"
                 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-2 tracking-tight">Our Values</h2>
             <p class="text-center text-lg text-gray-500 mb-10 max-w-2xl mx-auto">
@@ -187,80 +161,8 @@
                         leadership</h2>
                     <p class="mt-3 text-md leading-6 text-gray-500">Meet the team driving our success.</p>
                 </div>
-                <ul class="xl:col-span-2 grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2" role="list"
+                <ul class="xl:col-span-2 grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16" role="list"
                     aria-label="Leadership team">
-                    <li>
-                        <div class="flex items-center gap-x-6">
-                            <img class="h-24 w-24 rounded-full object-cover border border-gray-200" width="80"
-                                height="80" src="https://www.btmghana.net/_app/immutable/assets/sam.CxmMj7m5.png"
-                                alt="Sam Cookey" />
-                            <div>
-                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mr Sam Cookey
-                                    Jr</h3>
-                                <p class="text-sm font-medium leading-6 text-gray-500">Chairman</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center gap-x-6">
-                            <img class="h-24 w-24 rounded-full object-cover border border-gray-200" width="80"
-                                height="80" src="https://www.btmghana.net/_app/immutable/assets/bola.BoQxM2lb.png"
-                                alt="Bola Adefobe" />
-                            <div>
-                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mrs Bola
-                                    Adefope</h3>
-                                <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center gap-x-6">
-                            <img class="h-24 w-24 rounded-full object-cover border border-gray-200"
-                                src="https://www.btmghana.net/_app/immutable/assets/olufemi.rqbt3-R0.png" width="80"
-                                height="80" alt="Olufemi Adefope" />
-                            <div>
-                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mr Olufemi
-                                    Adefope</h3>
-                                <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center gap-x-6">
-                            <img class="h-24 w-24 rounded-full object-cover border border-gray-200"
-                                src="https://www.btmghana.net/_app/immutable/assets/bolanle.DRDNsvWt.jpg" width="80"
-                                height="80" alt="Bolanle Oluwayemisi Adeniji" />
-                            <div>
-                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Ms. Bolanle
-                                    Oluwayemisi Adeniji</h3>
-                                <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center gap-x-6">
-                            <img class="h-24 w-24 rounded-full object-cover border border-gray-200"
-                                src="https://www.btmghana.net/_app/immutable/assets/chioma.Cu3G18tJ.png" width="80"
-                                height="80" alt="Chioma Nweke" />
-                            <div>
-                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mrs Chioma
-                                    Nweke</h3>
-                                <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center gap-x-6">
-                            <img class="h-24 w-24 rounded-full object-cover border border-gray-200"
-                                src="https://www.btmghana.net/_app/immutable/assets/ademola.DRMQHCpI.png" width="80"
-                                height="80" alt="Ademola Adefarasin" />
-                            <div>
-                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mr. Ademola
-                                    Adefarasin</h3>
-                                <p class="text-sm font-medium leading-6 text-gray-500">Director</p>
-                            </div>
-                        </div>
-                    </li>
                     <li>
                         <div class="flex items-center gap-x-6">
                             <img class="h-24 w-24 rounded-full object-cover border border-gray-200"
@@ -270,6 +172,18 @@
                                 <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Ms. Lola
                                     Adefope</h3>
                                 <p class="text-sm font-medium leading-6 text-gray-500">Managing Director</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center gap-x-6">
+                            <img class="h-24 w-24 rounded-full object-cover border border-gray-200"
+                                src="https://www.btmghana.net/_app/immutable/assets/ademola.DRMQHCpI.png" width="80"
+                                height="80" alt="Ademola Adefarasin" />
+                            <div>
+                                <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mr. Nii 
+                                    Anyetei Akofio-Sowah</h3>
+                                <p class="text-sm font-medium leading-6 text-gray-500">Country Manager</p>
                             </div>
                         </div>
                     </li>

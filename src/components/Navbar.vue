@@ -92,7 +92,7 @@ onBeforeUnmount(() => {
                     aria-current="page">Contact</router-link>
                 <router-link to="/tour"
                     class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
-                    exact-active-class="!text-blue-600 font-bold" role="menuitem" aria-current="page">Tour</router-link>
+                    exact-active-class="!text-blue-600 font-bold" role="menuitem" aria-current="page">Tours</router-link>
                 <router-link to="/login"
                     class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
                     exact-active-class="!text-blue-600 font-bold" role="menuitem"
@@ -168,7 +168,7 @@ onBeforeUnmount(() => {
                     <router-link to="/tour"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"
-                        aria-current="page">Tour</router-link>
+                        aria-current="page">Tours</router-link>
                     <router-link to="/login"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"

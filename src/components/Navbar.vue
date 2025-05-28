@@ -13,6 +13,10 @@ function handleClickOutside(event) {
     }
 }
 
+function closeMobileMenu() {
+    mobileMenuOpen.value = false
+}
+
 onMounted(() => {
     document.addEventListener('click', handleClickOutside)
 })
@@ -122,11 +126,11 @@ onBeforeUnmount(() => {
                     <router-link to="/"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"
-                        aria-current="page">Home</router-link>
+                        aria-current="page" @click="closeMobileMenu">Home</router-link>
                     <router-link to="/about"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"
-                        aria-current="page">About</router-link>
+                        aria-current="page" @click="closeMobileMenu">About</router-link>
                     <div role="menuitem">
                         <button type="button"
                             class="flex w-full items-center justify-between px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase cursor-pointer"
@@ -145,34 +149,34 @@ onBeforeUnmount(() => {
                             role="menu" aria-label="Mobile brands menu">
                             <a href="https://www.btmholidays.com/" target="_blank" rel="noopener noreferrer"
                                 class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
-                                role="menuitem">BTM Holidays</a>
+                                role="menuitem" @click="closeMobileMenu">BTM Holidays</a>
                             <a href="https://www.journeyeasy.net/Login" target="_blank" rel="noopener noreferrer"
                                 class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
-                                role="menuitem">JourneyEasy</a>
+                                role="menuitem" @click="closeMobileMenu">JourneyEasy</a>
                             <a href="#"
                                 class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
-                                role="menuitem">TrekBuyFly</a>
+                                role="menuitem" @click="closeMobileMenu">TrekBuyFly</a>
                             <a href="https://marketplace.btmlimited.net/" target="_blank" rel="noopener noreferrer"
                                 class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
-                                role="menuitem">BTM Marketplace</a>
+                                role="menuitem" @click="closeMobileMenu">BTM Marketplace</a>
                         </div>
                     </div>
                     <router-link to="/services"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"
-                        aria-current="page">Services</router-link>
+                        aria-current="page" @click="closeMobileMenu">Services</router-link>
                     <router-link to="/contact"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"
-                        aria-current="page">Contact</router-link>
+                        aria-current="page" @click="closeMobileMenu">Contact</router-link>
                     <router-link to="/tour"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"
-                        aria-current="page">Tours</router-link>
+                        aria-current="page" @click="closeMobileMenu">Tours</router-link>
                     <router-link to="/login"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"
-                        aria-current="page">Login</router-link>
+                        aria-current="page" @click="closeMobileMenu">Login</router-link>
                 </div>
             </div>
         </div>

@@ -108,7 +108,7 @@ function closeModal() {
             class="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-xs transition-opacity duration-300"
             role="dialog" aria-modal="true"
             :aria-labelledby="selectedService ? `modal-title-${selectedService.title}` : 'modal-title'">
-            <div class="relative w-full max-w-lg mx-auto bg-white shadow-2xl rounded-xl p-0 sm:p-0 animate-modal-in">
+            <div class="relative w-full max-w-3xl mx-auto bg-white shadow-2xl rounded-xl p-0 sm:p-0 animate-modal-in">
                 <button
                     class="absolute top-2 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-500 text-2xl font-medium shadow transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                     @click="closeModal" aria-label="Close modal">&times;</button>

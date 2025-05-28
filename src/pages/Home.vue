@@ -26,6 +26,8 @@ const services = ref([
     { title: 'Group Travel & Airline Seat Blocking', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/psexhvqza7xhlgnqxeiq' }
 ])
 
+const activeTab = ref('flights')
+
 const handleScroll = () => {
     const heroSection = document.getElementById('hero-content')
     if (heroSection) {
@@ -71,6 +73,24 @@ onMounted(() => {
         updateArrowState()
     }
 })
+
+const handleTabChange = (tab) => {
+    activeTab.value = tab
+}
+
+// Add form data refs
+const flightData = ref({
+    from: '',
+    to: '',
+    dates: ''
+})
+
+const hotelData = ref({
+    location: '',
+    checkIn: '',
+    checkOut: '',
+    guests: '1'
+})
 </script>
 
 <template>
@@ -106,69 +126,137 @@ onMounted(() => {
                         class="bg-white/90 backdrop-blur-xl p-4 rounded-2xl shadow-xl border border-white/20 overflow-hidden hover:bg-white/95 transition-all duration-300">
                         <div class="mb-4 pb-3 border-b border-gray-100 flex items-center justify-between">
                             <div>
-                                <h2 class="text-gray-800 font-semibold">Find Your Next Adventure</h2>
-                                <p class="text-gray-500 text-sm">Search flights and more</p>
+                                <h2 class="text-gray-800 font-semibold">{{ activeTab === 'flights' ? 'Find Your Next Adventure' : 'Find Your Perfect Stay' }}</h2>
+                                <p class="text-gray-500 text-sm">{{ activeTab === 'flights' ? 'Search flights and more' : 'Search hotels and accommodations' }}</p>
                             </div>
-                            <div class="flex p-1 bg-gray-50/80 rounded-lg space-x-1 text-sm" role="tablist"
+                            <div class="flex p-1 bg-gray-50/80 rounded-lg space-x-4 text-sm" role="tablist"
                                 aria-label="Search type">
                                 <button
-                                    class="px-4 py-2 bg-blue-500 text-white rounded-md shadow-sm transition-all duration-200 hover:bg-blue-600 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                                    role="tab" aria-selected="true" aria-controls="flights-tab">Flights</button>
+                                    @click="handleTabChange('flights')"
+                                    :class="[
+                                        'px-4 py-2 rounded-md shadow-sm transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2',
+                                        activeTab === 'flights' 
+                                            ? 'bg-blue-500 text-white hover:bg-blue-600' 
+                                            : 'text-gray-600 hover:bg-white'
+                                    ]"
+                                    role="tab" 
+                                    :aria-selected="activeTab === 'flights'" 
+                                    aria-controls="flights-tab">Flights</button>
                                 <button
-                                    class="px-4 py-2 text-gray-600 hover:bg-white rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                                    role="tab" aria-selected="false" aria-controls="hotels-tab">Hotels</button>
+                                    @click="handleTabChange('hotels')"
+                                    :class="[
+                                        'px-4 py-2 rounded-md shadow-sm transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2',
+                                        activeTab === 'hotels' 
+                                            ? 'bg-blue-500 text-white hover:bg-blue-600' 
+                                            : 'text-gray-600 hover:bg-white'
+                                    ]"
+                                    role="tab" 
+                                    :aria-selected="activeTab === 'hotels'" 
+                                    aria-controls="hotels-tab">Hotels</button>
                             </div>
                         </div>
                         <form class="grid grid-cols-1 md:grid-cols-4 gap-4" aria-label="Search form">
-                            <div>
-                                <label for="from-field" class="sr-only">From where?</label>
-                                <div class="relative group">
-                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                        <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                        </svg>
+                            <!-- Flight Search Fields -->
+                            <template v-if="activeTab === 'flights'">
+                                <div>
+                                    <label for="from-field" class="sr-only">From where?</label>
+                                    <div class="relative group">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                            </svg>
+                                        </div>
+                                        <input id="from-field" v-model="flightData.from" type="text" placeholder="From where?"
+                                            class="pl-10 w-full h-12 bg-gray-50/80 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-300 transition-all text-gray-800 text-sm placeholder:text-gray-400" />
                                     </div>
-                                    <input id="from-field" type="text" placeholder="From where?"
-                                        class="pl-10 w-full h-12 bg-gray-50/80 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-300 transition-all text-gray-800 text-sm placeholder:text-gray-400" />
                                 </div>
-                            </div>
-                            <div>
-                                <label for="to-field" class="sr-only">Where to?</label>
-                                <div class="relative group">
-                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                        <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
+                                <div>
+                                    <label for="to-field" class="sr-only">Where to?</label>
+                                    <div class="relative group">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                        </div>
+                                        <input id="to-field" v-model="flightData.to" type="text" placeholder="Where to?"
+                                            class="pl-10 w-full h-12 bg-gray-50/80 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-300 transition-all text-gray-800 text-sm placeholder:text-gray-400" />
                                     </div>
-                                    <input id="to-field" type="text" placeholder="Where to?"
-                                        class="pl-10 w-full h-12 bg-gray-50/80 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-300 transition-all text-gray-800 text-sm placeholder:text-gray-400" />
                                 </div>
-                            </div>
-                            <div>
-                                <label for="date-field" class="sr-only">Select dates</label>
-                                <div class="relative group">
-                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                        <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
+                                <div>
+                                    <label for="date-field" class="sr-only">Select dates</label>
+                                    <div class="relative group">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        <input id="date-field" v-model="flightData.dates" type="text" placeholder="Select dates"
+                                            class="pl-10 w-full h-12 bg-gray-50/80 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-300 transition-all text-gray-800 text-sm placeholder:text-gray-400" />
                                     </div>
-                                    <input id="date-field" type="text" placeholder="Select dates"
-                                        class="pl-10 w-full h-12 bg-gray-50/80 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-300 transition-all text-gray-800 text-sm placeholder:text-gray-400" />
                                 </div>
-                            </div>
+                            </template>
+
+                            <!-- Hotel Search Fields -->
+                            <template v-else>
+                                <div>
+                                    <label for="location-field" class="sr-only">Where are you going?</label>
+                                    <div class="relative group">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                        </div>
+                                        <input id="location-field" v-model="hotelData.location" type="text" placeholder="Where are you going?"
+                                            class="pl-10 w-full h-12 bg-gray-50/80 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-300 transition-all text-gray-800 text-sm placeholder:text-gray-400" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="check-in-field" class="sr-only">Check-in date</label>
+                                    <div class="relative group">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        <input id="check-in-field" v-model="hotelData.checkIn" type="text" placeholder="Check-in"
+                                            class="pl-10 w-full h-12 bg-gray-50/80 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-300 transition-all text-gray-800 text-sm placeholder:text-gray-400" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="check-out-field" class="sr-only">Check-out date</label>
+                                    <div class="relative group">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        <input id="check-out-field" v-model="hotelData.checkOut" type="text" placeholder="Check-out"
+                                            class="pl-10 w-full h-12 bg-gray-50/80 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-300 transition-all text-gray-800 text-sm placeholder:text-gray-400" />
+                                    </div>
+                                </div>
+                            </template>
+
                             <div>
                                 <button type="submit"
                                     class="btn-primary group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                                    aria-label="Search Flights">
-                                    <span>Search Flights</span>
+                                    :aria-label="activeTab === 'flights' ? 'Search Flights' : 'Search Hotels'">
+                                    <span>{{ activeTab === 'flights' ? 'Search Flights' : 'Search Hotels' }}</span>
                                     <svg class="w-5 h-5 transition-transform duration-200 transform group-hover:translate-x-1"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

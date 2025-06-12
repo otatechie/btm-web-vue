@@ -94,7 +94,7 @@ onBeforeUnmount(() => {
                     class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
                     exact-active-class="!text-blue-600 font-bold" role="menuitem"
                     aria-current="page">Contact</router-link>
-                <router-link to="/tour"
+                <router-link to="/tours"
                     class="text-sm font-medium leading-6 text-gray-800 hover:text-blue-600 transition-colors duration-200 uppercase"
                     exact-active-class="!text-blue-600 font-bold" role="menuitem" aria-current="page">Tours</router-link>
                 <router-link to="/login"
@@ -169,7 +169,7 @@ onBeforeUnmount(() => {
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"
                         aria-current="page" @click="closeMobileMenu">Contact</router-link>
-                    <router-link to="/tour"
+                    <router-link to="/tours"
                         class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg transition-colors duration-200 uppercase"
                         exact-active-class="!text-blue-600 font-bold" role="menuitem"
                         aria-current="page" @click="closeMobileMenu">Tours</router-link>

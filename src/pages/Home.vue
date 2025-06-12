@@ -17,10 +17,10 @@ const partners = ref([
 ])
 
 const services = ref([
-    { title: 'BTM Visa Assistance & Consultation Services', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/visa.DC6nRem0.webp' },
+    { title: 'BTM Visa Assistance & Consultation Services', image: 'https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=1000&auto=format&fit=crop' },
     { title: 'Tourism Consultancy Services', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/okhcxc9uoak6kde39qsv' },
-    { title: 'Hotel Booking Services', image: '/_app/immutable/assets/hotel-accomodation.WQEVyR5m.webp' },
-    { title: 'Consultancy Services', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/epqfsjnwqzzgrjfgog1i' },
+    { title: 'Hotel Booking Services', image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1000&auto=format&fit=crop' },
+    { title: 'Consultancy Services', image: 'https://images.unsplash.com/photo-1739298061707-cefee19941b7?q=80&w=1000&auto=format&fit=crop' },
     { title: 'Airport Concierge & Transfer Services', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/b0ytqemclwuu8vmxgl4x' },
     { title: 'Travel Advisory Services', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/bbo82cpyhsqmpzm1n1k8' },
     { title: 'Group Travel & Airline Seat Blocking', image: 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/psexhvqza7xhlgnqxeiq' }
@@ -299,7 +299,7 @@ const hotelData = ref({
                     <div ref="servicesScrollRef"
                         class="services-scroll-container flex overflow-x-auto gap-4 pb-6 snap-x snap-mandatory scrollbar-hide"
                         aria-label="Our services" tabindex="0">
-                        <a v-for="service in services" :key="service.title" href="#" tabindex="0"
+                        <a v-for="service in services" :key="service.title" :href="`/services?service=${encodeURIComponent(service.title)}`" tabindex="0"
                             class="flex-none w-[180px] snap-start group outline-none focus:ring-2 focus:ring-blue-400 rounded-xl transition-shadow">
                             <div
                                 class="relative rounded-xl overflow-hidden shadow-md h-[200px] cursor-pointer transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl group-active:scale-95 group-focus:shadow-2xl">
@@ -340,7 +340,7 @@ const hotelData = ref({
                         </button>
                     </div>
                     <div class="flex justify-center mt-6">
-                        <a href="#"
+                        <a href="/services"
                             class="btn-primary !w-auto !h-auto px-8 py-3 text-base font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                             aria-label="View all services">View all our services</a>
                     </div>

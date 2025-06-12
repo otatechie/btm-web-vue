@@ -168,39 +168,44 @@ const tourPackages = [
     {
         slug: 'zanzibar-tropical-dreams',
         title: 'Tropical Dreams Come True in Zanzibar',
-        description: 'Paradise found on East Africa\'s spice island',
-        fullDescription: `Experience the tropical paradise of Zanzibar with this comprehensive package. Your journey includes:
+        description: 'Unwind in paradise with this carefully designed 5-day getaway to Zanzibar',
+        fullDescription: `Unwind in paradise with this carefully designed 5-day getaway to Zanzibar, where white-sand beaches, vibrant culture, and breathtaking ocean adventures await. This experience blends comfort, relaxation, and discovery for the perfect tropical holiday.
 
-• Beach resort accommodation
-• Spice tour experience
-• Stone Town heritage walk
-• Sunset dhow cruise
-• Snorkeling trip
-• Prison Island visit
-• Local cooking class
-• Beach activities`,
+Enjoy 4 nights of comfortable accommodation at either the serene Zanzibar Bay Resort or the stunning My Blue Hotel, complete with daily breakfast and private return airport transfers to ensure a seamless arrival and departure.`,
         image: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=1000&auto=format&fit=crop',
         gallery: [
             'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f',
             'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe',
             'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe'
         ],
-        price: 'USD 1670',
-        duration: '6 days / 5 nights',
-        groupSize: '2-8 people',
+        price: 'From USD 700',
+        duration: '5 days / 4 nights',
+        groupSize: 'Flexible',
         includes: [
-            'Resort accommodation',
+            'Accommodation in Zanzibar',
             'Daily breakfast',
-            'Some activities',
-            'Airport transfers',
-            'Local guide',
-            'Welcome dinner'
+            'Return airport transfers',
+            'Meet & Greet service',
+            'Stone Town & Spice Farm tour',
+            'Mnemba Island tour with Dolphin trekking',
+            'All taxes (excl. infrastructure fee)'
         ],
         highlights: [
-            'Beach Paradise',
-            'Cultural Heritage',
-            'Water Activities',
-            'Local Cuisine'
+            'Stone Town UNESCO Site',
+            'Spice Plantations',
+            'Mnemba Island Snorkeling',
+            'Dolphin Watching'
+        ],
+        validityInfo: 'Travel valid from 1st to 31st August 2025. Rates subject to availability and may change without prior notice. Rates are per person sharing.',
+        hotelOptions: [
+            {
+                name: 'Zanzibar Bay Resort',
+                price: 'USD 700'
+            },
+            {
+                name: 'My Blue Hotel',
+                price: 'USD 1010'
+            }
         ]
     }
 ];
@@ -356,6 +361,36 @@ watchEffect(() => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Hotel Options -->
+                    <div v-if="tour.hotelOptions" class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                            Accommodation Options
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div v-for="hotel in tour.hotelOptions" :key="hotel.name"
+                                class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
+                                <h3 class="font-semibold text-lg text-gray-900 mb-2">{{ hotel.name }}</h3>
+                                <p class="text-blue-600 font-bold">{{ hotel.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Validity Information -->
+                    <div v-if="tour.validityInfo" class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Validity & Terms
+                        </h2>
+                        <p class="text-gray-600 whitespace-pre-line leading-relaxed">{{ tour.validityInfo }}</p>
                     </div>
                 </div>
 

@@ -36,7 +36,7 @@ const routes = [
         meta: { title: 'Login - BTM Ghana' }
     },
     { 
-        path: '/tour', 
+        path: '/tours', 
         component: Tour,
         meta: { title: 'Tour Packages - BTM Ghana' }
     },
@@ -49,6 +49,15 @@ const routes = [
         path: '/terms',
         component: Terms,
         meta: { title: 'Terms of Service - BTM Ghana' }
+    },
+    {
+        path: '/tours/:slug',
+        name: 'TourDetails',
+        component: () => import('./pages/TourDetails.vue'),
+        props: true,
+        meta: { 
+            title: route => `${route.params.slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} - BTM Ghana`
+        }
     }
 ]
 

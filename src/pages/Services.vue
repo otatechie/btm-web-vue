@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const serviceHeadings = {
     'BTM Visa Assistance & Consultation Services': 'BTM Visa Assistance & Consultation Services',
@@ -12,10 +12,10 @@ const serviceHeadings = {
 };
 
 const serviceImages = {
-    'BTM Visa Assistance & Consultation Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/visa.DC6nRem0.webp',
+    'BTM Visa Assistance & Consultation Services': 'https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=1000&auto=format&fit=crop',
     'Tourism Consultancy Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/okhcxc9uoak6kde39qsv',
-    'Hotel Booking Services': '/_app/immutable/assets/hotel-accomodation.WQEVyR5m.webp',
-    'Consultancy Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/epqfsjnwqzzgrjfgog1i',
+    'Hotel Booking Services': 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1000&auto=format&fit=crop',
+    'Consultancy Services': 'https://images.unsplash.com/photo-1739298061707-cefee19941b7?q=80&w=1000&auto=format&fit=crop',
     'Airport Concierge & Transfer Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/b0ytqemclwuu8vmxgl4x',
     'Travel Advisory Services': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/bbo82cpyhsqmpzm1n1k8',
     'Group Travel & Airline Seat Blocking': 'https://res.cloudinary.com/dafsjzwqf/image/upload/f_auto,q_auto/v1/BTM-Website/psexhvqza7xhlgnqxeiq',
@@ -28,6 +28,21 @@ const services = Object.keys(serviceHeadings).map(title => ({
 
 const showModal = ref(false);
 const selectedService = ref(null);
+
+onMounted(() => {
+    // Get the service from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceFromUrl = urlParams.get('service');
+    
+    if (serviceFromUrl) {
+        // Find the matching service
+        const service = services.find(s => s.title === serviceFromUrl);
+        if (service) {
+            selectedService.value = service;
+            showModal.value = true;
+        }
+    }
+});
 
 const serviceDescriptions = {
     'BTM Visa Assistance & Consultation Services': `As part of our comprehensive range of offerings, we provide expert visa assistance and consultation through our dedicated BTM Visa Services. Our experienced in-house team is well-equipped to deliver professional, reliable, and efficient support on all matters relating to visa applications and immigration requirements. We are committed to guiding our clients through every step of the process with clarity and confidence.`,

@@ -1,26 +1,53 @@
 <script setup>
 const tourPackages = [
     {
-        title: 'Dubai Family Package (4 persons)',
+        slug: 'dubai-family-package',
+        title: 'Dubai Family Package',
         description: 'Experience luxury and adventure in the heart of Dubai',
         image: 'https://res.cloudinary.com/djjoidnbp/image/upload/v1746444989/popup-agency-jJtqDVzozQY-unsplash_nyvcs9.jpg',
-        price: 'USD 7500',
-        link: '/tours/599c401e-219c-4578-81de-eee5dcd23d7a',
-        badge: 'Best Seller'
+        price: 'USD 7500'
     },
     {
-        title: 'Qatar Family Package (4 persons)',
+        slug: 'qatar-family-package',
+        title: 'Qatar Family Package',
         description: 'Discover the wonders of modern Qatar',
         image: 'https://res.cloudinary.com/djjoidnbp/image/upload/v1746445727/hongbin-1UF8ddEalwk-unsplash_mwqomm.jpg',
-        price: 'USD 7800',
-        link: '/tours/73b08ef5-6f0a-4ebb-b6cf-c0e1237883df'
+        price: 'USD 7800'
     },
     {
-        title: 'Kenya Family Package (Mombasa and Nairobi) - Family of 4',
+        slug: 'kenya-family-package',
+        title: 'Kenya Family Package',
         description: 'Explore Mombasa and Nairobi\'s rich culture',
         image: 'https://media.istockphoto.com/id/2070262465/photo/skyline-of-nairobi-east-with-ngara-district.webp?a=1&b=1&s=612x612&w=0&k=20&c=sWYoNpIT4lxt6utSDPlrPo0LOFnWo2EuxJq6QT_HfPw=',
-        price: 'USD 1775',
-        link: '/tours/d355d93d-c80f-4e8a-8858-1d1ab7ec7d3d'
+        price: 'USD 1775'
+    },
+    {
+        slug: 'odyssey-of-the-seas',
+        title: 'Odyssey of the Seas',
+        description: 'Experience luxury cruising at its finest',
+        image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1000&auto=format&fit=crop',
+        price: 'USD 1670'
+    },
+    {
+        slug: 'zanzibar-tropical-dreams',
+        title: 'Tropical Dreams Come True in Zanzibar',
+        description: 'Unwind in paradise with this carefully designed 5-day getaway to Zanzibar',
+        image: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=1000&auto=format&fit=crop',
+        price: 'From USD 700'
+    },
+    {
+        slug: 'eastern-mediterranean-savings',
+        title: 'Beat the Clock Savings - Eastern Mediterranean',
+        description: 'Ancient wonders and azure waters await',
+        image: 'https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?q=80&w=1000&auto=format&fit=crop',
+        price: 'USD 1670'
+    },
+    {
+        slug: 'cape-town-escape',
+        title: 'Cape Town Escape: 5 Days of Culture, Coastlines & Adventure',
+        description: 'Where city meets nature in perfect harmony',
+        image: 'https://images.unsplash.com/photo-1474874055390-459bc92357f3?q=80&w=1000&auto=format&fit=crop',
+        price: 'USD 1670'
     }
 ];
 
@@ -160,15 +187,18 @@ const features = [
                             <p class="text-xl font-bold text-gray-700">{{ tourPackage.price }}</p>
                             <p class="text-gray-400 text-xs mt-1">Per Person On Double Sharing Basis</p>
                         </div>
-                        <a :href="tourPackage.link"
-                            class="btn-primary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        <router-link :to="{ name: 'TourDetails', params: { slug: tourPackage.slug } }"
+                            class="group relative inline-flex items-center justify-center w-full px-6 py-3 mt-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                             :aria-label="`View ${tourPackage.title} details`">
-                            View more
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
+                            <span class="relative flex items-center gap-2">
+                                <span>View tour details</span>
+                                <svg class="w-4 h-4 transition-transform duration-300 transform group-hover:translate-x-1"
+                                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </span>
+                        </router-link>
                     </div>
                 </article>
             </div>
@@ -290,5 +320,16 @@ const features = [
 /* Add smooth scrolling to the page */
 html {
     scroll-behavior: smooth;
+}
+
+/* Add modal transition styles */
+.modal-enter-active,
+.modal-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+    opacity: 0;
 }
 </style>

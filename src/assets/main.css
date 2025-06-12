@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Noto Sans", "sans-serif";
+    --font-sans: "Hind Vadodara", "sans-serif";
 }
 
 @layer base {

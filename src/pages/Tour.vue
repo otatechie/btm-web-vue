@@ -36,11 +36,11 @@ const tourPackages = [
         price: 'From USD 700'
     },
     {
-        slug: 'eastern-mediterranean-savings',
-        title: 'Beat the Clock Savings - Eastern Mediterranean',
-        description: 'Ancient wonders and azure waters await',
-        image: 'https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?q=80&w=1000&auto=format&fit=crop',
-        price: 'USD 1670'
+        slug: 'beat-the-clock-mediterranean',
+        title: 'Beat the Clock Mediterranean',
+        description: 'Experience the best of Greece and Turkey in this enchanting Mediterranean cruise',
+        image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1000&auto=format&fit=crop',
+        price: 'USD 1,422'
     },
     {
         slug: 'cape-town-escape',
@@ -208,7 +208,7 @@ const features = [
         <section class="py-16 px-4 bg-white" aria-labelledby="destinations-heading">
             <div class="max-w-5xl mx-auto">
                 <header class="text-center mb-20">
-                    <h2 id="destinations-heading" class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Popular
+                    <h2 id="destinations-heading" class="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">Popular
                         Destinations</h2>
                     <p class="text-md text-gray-600 max-w-2xl mx-auto">Explore our most sought-after locations in Ghana
                     </p>
@@ -248,7 +248,7 @@ const features = [
         <section class="py-16 bg-gray-50" aria-labelledby="features-heading">
             <div class="max-w-5xl mx-auto px-6 sm:px-8">
                 <header class="text-center mb-16">
-                    <h2 id="features-heading" class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose Us
+                    <h2 id="features-heading" class="text-3xl md:text-4xl font-semibold text-gray-700 mb-4">Why Choose Us
                     </h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">Experience the difference with our premium travel
                         services</p>

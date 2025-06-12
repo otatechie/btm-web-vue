@@ -27,8 +27,7 @@ const tourPackages = [
         image: 'https://res.cloudinary.com/djjoidnbp/image/upload/v1746444989/popup-agency-jJtqDVzozQY-unsplash_nyvcs9.jpg',
         gallery: [
             'https://images.unsplash.com/photo-1512453979798-5ea266f8880c',
-            'https://images.unsplash.com/photo-1526495124232-a04e1849168c',
-            'https://images.unsplash.com/photo-1533577116850-9cc66cad8a9b',
+            'https://images.unsplash.com/photo-1526495124232-a04e1849168c'
         ],
         price: 'USD 7500',
         duration: '7 days / 6 nights',
@@ -48,7 +47,7 @@ const tourPackages = [
             'Wild Wadi Water Park'
         ]
     },
-    
+
     {
         slug: 'qatar-family-package',
         title: 'Qatar Family Package',
@@ -66,8 +65,7 @@ const tourPackages = [
         image: 'https://res.cloudinary.com/djjoidnbp/image/upload/v1746445727/hongbin-1UF8ddEalwk-unsplash_mwqomm.jpg',
         gallery: [
             'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46',
-            'https://images.unsplash.com/photo-1565849980697-25ef80573146',
-            'https://images.unsplash.com/photo-1563911892437-1feda0179e1b'
+            'https://images.unsplash.com/photo-1565849980697-25ef80573146'
         ],
         price: 'USD 7800',
         duration: '6 days / 5 nights',
@@ -105,8 +103,7 @@ const tourPackages = [
         image: 'https://media.istockphoto.com/id/2070262465/photo/skyline-of-nairobi-east-with-ngara-district.webp?a=1&b=1&s=612x612&w=0&k=20&c=sWYoNpIT4lxt6utSDPlrPo0LOFnWo2EuxJq6QT_HfPw=',
         gallery: [
             'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e',
-            'https://images.unsplash.com/photo-1523805009345-7448845a9e53',
-            'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5'
+            'https://images.unsplash.com/photo-1523805009345-7448845a9e53'
         ],
         price: 'USD 1775',
         duration: '8 days / 7 nights',
@@ -127,41 +124,97 @@ const tourPackages = [
         ]
     },
     {
-        slug: 'odyssey-of-the-seas',
-        title: 'Odyssey of the Seas',
-        description: 'Experience luxury cruising at its finest',
-        fullDescription: `Embark on an unforgettable journey aboard the magnificent Odyssey of the Seas. This cruise experience includes:
+        slug: 'beat-the-clock-mediterranean',
+        title: 'Beat the Clock Mediterranean',
+        description: 'Experience the best of Greece and Turkey in this enchanting Mediterranean cruise',
+        fullDescription: `Set sail on an unforgettable Mediterranean journey starting June 27th, 2025, exploring the most iconic destinations in Greece and Turkey. This carefully crafted itinerary takes you through:
 
-• Luxury cabin accommodation
-• All-inclusive dining
-• World-class entertainment
-• Pool and spa access
-• Fitness center access
-• Multiple port stops
-• Shore excursion options
-• Evening shows and activities`,
-        image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1000&auto=format&fit=crop',
+• Athens (Piraeus), Greece - Starting point
+• Santorini, Greece - Famous for its stunning caldera views
+• Ephesus (Kusadasi), Turkey - Ancient historical marvel
+• Istanbul, Turkey - Where East meets West
+• Mykonos, Greece - Iconic white-washed paradise
+• Athens (Piraeus), Greece - Return
+
+Experience the perfect blend of ancient history, stunning landscapes, and Mediterranean charm. Your journey includes comfortable Oceanview Stateroom accommodation, ensuring beautiful sea views throughout your voyage.
+
+All your needs are taken care of with:
+• Comprehensive dining options
+• Exciting entertainment programs
+• Various onboard activities
+• All gratuities included
+• Port charges and taxes covered
+
+This is your chance to explore the Mediterranean's most beautiful destinations while enjoying the comfort and luxury of modern cruising.`,
+        image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1000&auto=format&fit=crop',
         gallery: [
-            'https://images.unsplash.com/photo-1548574505-5e239809ee19',
-            'https://images.unsplash.com/photo-1544473244-f6895e69ad8b',
-            'https://images.unsplash.com/photo-1544473244-7c0a46c65a6e'
+            'https://images.unsplash.com/photo-1533105079780-92b9be482077',
+            'https://images.unsplash.com/photo-1530841377377-3ff06c0ca713'
         ],
-        price: 'USD 1670',
-        duration: '7 days / 6 nights',
-        groupSize: 'Various cabin options',
+        price: 'USD 1,422',
+        duration: '7 days',
+        groupSize: 'Oceanview Stateroom',
         includes: [
-            'Cabin accommodation',
-            'All meals',
-            'Entertainment',
-            'Port charges',
-            'Basic beverages',
-            'Ship activities'
+            'Oceanview Stateroom accommodation',
+            'All dining options',
+            'Entertainment & activities',
+            'Gratuities',
+            'Taxes and fees',
+            'Port charges'
         ],
         highlights: [
-            'Luxury Cruising',
-            'Fine Dining',
-            'Entertainment',
-            'Port Excursions'
+            'Athens Exploration',
+            'Santorini Sunset Views',
+            'Ancient Ephesus Tour',
+            'Istanbul Discovery',
+            'Mykonos Island Experience'
+        ]
+    },
+
+    {
+        slug: 'odyssey-of-the-seas',
+        title: 'Odyssey of the Seas',
+        description: 'Experience luxury Mediterranean cruising at its finest',
+        fullDescription: `Embark on an unforgettable Mediterranean journey aboard the magnificent Odyssey of the Seas from August 18th - 24th, 2025. This 7-night cruise experience takes you through the most beautiful destinations in the Mediterranean, including:
+
+• Rome (Civitavecchia), Italy
+• Santorini, Greece
+• Ephesus, Turkey
+• Naples, Italy
+• Return to Rome (Civitavecchia), Italy
+
+Each destination offers unique experiences, from ancient historical sites to breathtaking coastal views. Your journey includes:
+
+• Luxury cabin accommodation for 7 nights
+• More than 10 meals daily featuring world-class cuisine
+• Exciting entertainment including Broadway shows
+• Pool side movie nights under the stars
+• Room service available until 10pm
+• All taxes and port charges included
+`,
+        image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1000&auto=format&fit=crop',
+        gallery: [
+            'https://images.unsplash.com/photo-1548574505-5e239809ee19'
+        ],
+        price: 'USD 1670',
+        duration: '7 nights',
+        groupSize: 'Various cabin options',
+        includes: [
+            '7 Night\'s Accommodation on board',
+            'More than 10 meals daily',
+            'Pool Side Movie Night',
+            'Broadway Shows',
+            'Room service until 10pm',
+            'Taxes and port charges',
+            'Visa application assistance',
+            'Flight booking assistance'
+        ],
+        highlights: [
+            'Rome & Civitavecchia',
+            'Santorini Island',
+            'Ancient Ephesus',
+            'Naples Exploration',
+            'Luxury Cruising'
         ]
     },
 
@@ -175,10 +228,9 @@ Enjoy 4 nights of comfortable accommodation at either the serene Zanzibar Bay Re
         image: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=1000&auto=format&fit=crop',
         gallery: [
             'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f',
-            'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe',
             'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe'
         ],
-        price: 'From USD 700',
+        price: 'USD 700',
         duration: '5 days / 4 nights',
         groupSize: 'Flexible',
         includes: [
@@ -205,6 +257,68 @@ Enjoy 4 nights of comfortable accommodation at either the serene Zanzibar Bay Re
             {
                 name: 'My Blue Hotel',
                 price: 'USD 1010'
+            }
+        ]
+    },
+    {
+        slug: 'cape-town-escape',
+        title: 'Cape Town Escape',
+        description: 'Experience the perfect blend of nature, history, and culture in Cape Town',
+        fullDescription: `Embark on a carefully curated 5-day adventure through the vibrant city of Cape Town — a destination where natural beauty, rich history, and unforgettable experiences come together.
+
+Enjoy 4 nights of comfortable accommodation with daily breakfast, private airport transfers, and expertly guided tours that bring the city's charm to life.
+
+Highlights Include:
+• Cape Town City Tour
+Stroll through the heart of the city, explore historic landmarks, and ascend the iconic Table Mountain via cable car for panoramic views.
+
+• V&A Waterfront Visit
+Immerse yourself in Cape Town's dynamic waterfront district, filled with shopping, dining, and entertainment options.
+
+• Full-Day Cape Peninsula Tour
+Journey to the scenic Cape of Good Hope, meet the adorable penguins at Boulders Beach, and enjoy awe-inspiring views along the coastline.
+
+• Half-Day Winelands Tour
+Unwind among lush vineyards and indulge in a premium wine tasting experience in one of South Africa's most celebrated wine regions.
+
+Whether you're drawn by nature, culture, or cuisine, this package delivers a perfect balance of relaxation and exploration.`,
+        image: 'https://images.unsplash.com/photo-1580060839134-75a5edca2e99?q=80&w=1000&auto=format&fit=crop',
+        gallery: [
+            'https://images.unsplash.com/photo-1580060839134-75a5edca2e99',
+            'https://images.unsplash.com/photo-1546026423-cc4642628d2b'
+        ],
+        price: 'USD 630',
+        duration: '5 days / 4 nights',
+        groupSize: 'Flexible',
+        includes: [
+            '4 nights accommodation',
+            'Daily breakfast',
+            'Return private airport transfers',
+            'Cape Town City Tour',
+            'Table Mountain cable car ride',
+            'V&A Waterfront visit',
+            'Full-day Cape Peninsula Tour',
+            'Half-day Winelands Tour with wine tasting'
+        ],
+        highlights: [
+            'Table Mountain Experience',
+            'V&A Waterfront Visit',
+            'Cape Peninsula Tour',
+            'Winelands Wine Tasting'
+        ],
+        validityInfo: 'Travel valid for March – May & September – November 2025. Rates subject to availability and may change without prior notice.',
+        hotelOptions: [
+            {
+                name: 'Lagoon Beach Hotel & Spa',
+                price: 'USD 790'
+            },
+            {
+                name: 'Holiday Inn Express Cape Town City Centre',
+                price: 'USD 650'
+            },
+            {
+                name: 'Capetonian Hotel',
+                price: 'USD 630'
             }
         ]
     }
@@ -274,7 +388,7 @@ watchEffect(() => {
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
-                            <span itemprop="name">{{ tour.title }}</span>
+                            <span itemprop="name" class="text-xs">{{ tour.title }}</span>
                             <meta itemprop="position" content="3" />
                         </span>
                     </li>
@@ -289,13 +403,13 @@ watchEffect(() => {
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 right-0 p-12">
                         <div class="flex items-center gap-4 mb-4">
-                            <span class="px-3 py-1 bg-blue-600/90 text-white rounded-full text-sm font-medium">{{
+                            <span class="px-2 py-1 bg-blue-600/90 text-white rounded-full text-xs font-medium">{{
                                 tour.duration }}</span>
-                            <span class="px-3 py-1 bg-blue-600/90 text-white rounded-full text-sm font-medium">{{
+                            <span class="px-2 py-1 bg-blue-600/90 text-white rounded-full text-xs font-medium">{{
                                 tour.groupSize }}</span>
                         </div>
-                        <h1 class="text-5xl font-bold text-white mb-4 leading-tight">{{ tour.title }}</h1>
-                        <p class="text-xl text-white/90 max-w-3xl">{{ tour.description }}</p>
+                        <h1 class="text-4xl font-bold text-white mb-4 leading-tight">{{ tour.title }}</h1>
+                        <p class="text-lg text-white/90 max-w-3xl">{{ tour.description }}</p>
                     </div>
                 </div>
             </div>
@@ -364,7 +478,8 @@ watchEffect(() => {
                     </div>
 
                     <!-- Hotel Options -->
-                    <div v-if="tour.hotelOptions" class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                    <div v-if="tour.hotelOptions"
+                        class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
                         <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                             <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -376,13 +491,14 @@ watchEffect(() => {
                             <div v-for="hotel in tour.hotelOptions" :key="hotel.name"
                                 class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
                                 <h3 class="font-semibold text-lg text-gray-900 mb-2">{{ hotel.name }}</h3>
-                                <p class="text-blue-600 font-bold">{{ hotel.price }}</p>
+                                <p class="text-blue-600 font-semibold">{{ hotel.price }}</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Validity Information -->
-                    <div v-if="tour.validityInfo" class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                    <div v-if="tour.validityInfo"
+                        class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
                         <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                             <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -400,7 +516,7 @@ watchEffect(() => {
                     <div class="bg-white rounded-xl shadow-lg p-8 sticky top-8">
                         <div class="text-center mb-8 pb-6 border-b border-gray-100">
                             <p class="text-sm text-gray-500 uppercase tracking-wide font-medium">Starting from</p>
-                            <p class="text-4xl font-bold text-gray-900 my-2">{{ tour.price }}</p>
+                            <p class="text-3xl font-bold text-gray-700 my-2">{{ tour.price }}</p>
                             <p class="text-sm text-gray-500">per person</p>
                         </div>
 
@@ -467,10 +583,28 @@ watchEffect(() => {
                     </div>
                 </div>
             </div>
+
+            <!-- Mobile Fixed Booking Bar -->
+            <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 lg:hidden z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+                <div class="flex items-center justify-between max-w-7xl mx-auto">
+                    <div class="flex flex-col">
+                        <span class="text-sm text-gray-500">Starting from</span>
+                        <span class="text-xl font-bold text-gray-900">{{ tour.price }}</span>
+                    </div>
+                    <button class="bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Book Now
+                    </button>
+                </div>
+            </div>
         </div>
     </main>
 </template>
 
 <style scoped>
-/* Add any component-specific styles here */
+/* Add padding to the bottom of the page on mobile to account for fixed booking bar */
+@media (max-width: 1023px) {
+    main {
+        padding-bottom: 5rem;
+    }
+}
 </style>

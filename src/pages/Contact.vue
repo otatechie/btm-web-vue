@@ -2,7 +2,7 @@
     <main class="relative min-h-screen bg-neutral-50 fade-in">
         <div class="w-full flex flex-col items-center pt-12 px-4">
             <div class="w-full max-w-3xl text-center my-12">
-                <h1 class="text-2xl md:text-3xl font-bold uppercase text-gray-700 mb-2 tracking-widest">Get in Touch,
+                <h1 class="text-2xl md:text-3xl font-bold uppercase text-gray-800 mb-2 tracking-widest">Get in Touch,
                     Start Your Journey Today!</h1>
                 <div class="w-16 h-0.5 bg-blue-500 mx-auto mb-4" aria-hidden="true"></div>
                 <p class="mt-2 text-base text-gray-500">Looking for personalized travel recommendations? We'd love to

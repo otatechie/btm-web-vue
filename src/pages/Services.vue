@@ -69,7 +69,7 @@ function closeModal() {
     <main class="relative min-h-screen bg-gradient-to-b from-neutral-50 to-white fade-in">
         <div class="w-full flex flex-col items-center pt-12 px-4">
             <div class="w-full max-w-3xl text-center my-12">
-                <h1 class="text-2xl md:text-3xl font-bold uppercase text-gray-700 mb-2 tracking-widest">Discover Our
+                <h1 class="text-2xl md:text-3xl font-bold uppercase text-gray-800 mb-2 tracking-widest">Discover Our
                     Travel Services</h1>
                 <div class="w-16 h-0.5 bg-blue-500 mx-auto mb-4" aria-hidden="true"></div>
                 <p class="mt-2 text-base text-gray-500">Explore our array of services, including luxury accommodations,
@@ -105,7 +105,7 @@ function closeModal() {
                 <div
                     class="relative isolate overflow-hidden bg-gray-900 px-6 py-16 text-center shadow-xl rounded-xl sm:px-16">
                     <h2 id="cta-heading"
-                        class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to
+                        class="mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">Ready to
                         Start Your Journey?</h2>
                     <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Let us help you plan your perfect
                         trip. Contact us today to discuss your travel dreams.</p>

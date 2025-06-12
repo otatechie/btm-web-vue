@@ -350,7 +350,7 @@ const hotelData = ref({
 
         <section id="jumbotron-content" aria-labelledby="about-heading">
             <div class="relative bg-white py-12 sm:py-12">
-                <div class="absolute inset-y-0 right-0 hidden lg:block w-1/2 bg-gradient-to-l from-blue-50 to-transparent"
+                <div class="absolute inset-y-0 right-0 hidden lg:block w-1/2 bg-gradient-to-t from-blue-50 "
                     aria-hidden="true"></div>
                 <div class="mx-auto max-w-7xl px-6 lg:px-8">
                     <div
@@ -367,7 +367,7 @@ const hotelData = ref({
                                 <p class="text-base font-medium leading-7 text-blue-600 uppercase tracking-wide">Who we
                                     are</p>
                                 <h2 id="about-heading"
-                                    class="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">Effective
+                                    class="mt-2 text-3xl font-semibold tracking-tight text-gray-800 sm:text-4xl">Effective
                                     Travel Management Solutions For Your Business</h2>
                                 <div class="max-w-xl">
                                     <div class="mt-6 space-y-6 text-gray-600">
@@ -398,7 +398,7 @@ const hotelData = ref({
         <section id="partners-content" class="relative bg-white py-16 sm:py-24" aria-labelledby="partners-heading">
             <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 id="partners-heading" class="text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">Our
+                    <h2 id="partners-heading" class="text-3xl font-semibold tracking-tight text-gray-800 sm:text-4xl">Our
                         Trusted Partners</h2>
                     <p class="mt-4 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">Working with the best in the
                         industry to serve you better</p>

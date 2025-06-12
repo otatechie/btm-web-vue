@@ -20,14 +20,19 @@ jobs:
         id: tag
         run: |
           TAG_MESSAGE=$(git tag -l --format='%(contents)' ${{ github.ref_name }})
+          # Remove the 'v' prefix for title
+          VERSION=${GITHUB_REF_NAME#v}
+          # Format title as "Release x.y.z"
+          TITLE="Release ${VERSION}"
           echo "message<<EOF" >> $GITHUB_OUTPUT
           echo "$TAG_MESSAGE" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          name: "BTM Ghana Tours ${{ github.ref_name }}"
+          name: "${{ steps.tag.outputs.title }}"
           body: ${{ steps.tag.outputs.message }}
           draft: false
           prerelease: false 

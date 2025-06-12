@@ -3,7 +3,7 @@
         <section class="w-full flex flex-col items-center pt-12 px-4" aria-labelledby="about-heading">
             <header class="w-full max-w-3xl text-center my-12">
                 <h1 id="about-heading"
-                    class="text-2xl md:text-3xl font-bold uppercase text-gray-700 mb-2 tracking-widest">We Take Care Of
+                    class="text-2xl md:text-3xl font-bold uppercase text-gray-800 mb-2 tracking-widest">We Take Care Of
                     Your Travel Needs</h1>
                 <div class="w-16 h-0.5 bg-blue-500 mx-auto mb-4" aria-hidden="true"></div>
                 <p class="mt-2 text-base text-gray-500">Who we are</p>
@@ -37,7 +37,7 @@
 
         <section class="mb-10" aria-labelledby="values-heading">
             <h2 id="values-heading"
-                class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-2 tracking-tight">Our Values</h2>
+                class="text-3xl md:text-4xl font-semibold text-center text-gray-800 mb-2 tracking-tight">Our Values</h2>
             <p class="text-center text-lg text-gray-500 mb-10 max-w-2xl mx-auto">
                 The guiding principles that shape our culture and drive our actions define who we are, how we work, and
                 what we stand for.
@@ -155,7 +155,7 @@
 
         <section class="bg-white py-16" aria-labelledby="leadership-heading">
             <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-                <div class="max-w-2xl">
+                <div class="max-w-2xl mx-auto">
                     <h2 id="leadership-heading"
                         class="text-3xl font-semibold font-display tracking-tight text-gray-800 sm:text-4xl">Our
                         leadership</h2>
@@ -178,7 +178,7 @@
                     <li>
                         <div class="flex items-center gap-x-6">
                             <img class="h-24 w-24 rounded-full object-cover border border-gray-200"
-                                src="https://www.btmghana.net/_app/immutable/assets/ademola.DRMQHCpI.png" width="80"
+                                src="/images/nii.jpeg" width="80"
                                 height="80" alt="Ademola Adefarasin" />
                             <div>
                                 <h3 class="text-sm font-medium leading-7 tracking-tight text-gray-800">Mr. Nii 

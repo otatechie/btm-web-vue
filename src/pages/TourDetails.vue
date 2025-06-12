@@ -151,7 +151,7 @@ This is your chance to explore the Mediterranean's most beautiful destinations w
             'https://images.unsplash.com/photo-1533105079780-92b9be482077',
             'https://images.unsplash.com/photo-1530841377377-3ff06c0ca713'
         ],
-        price: 'USD 1,422',
+        price: 'USD 1422',
         duration: '7 days',
         groupSize: 'Oceanview Stateroom',
         includes: [

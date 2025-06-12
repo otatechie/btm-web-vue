@@ -1,53 +1,99 @@
 <script setup>
+import { ref } from 'vue';
+
+const showTooltip = ref(null);
+
 const tourPackages = [
     {
         slug: 'dubai-family-package',
         title: 'Dubai Family Package',
         description: 'Experience luxury and adventure in the heart of Dubai',
         image: 'https://res.cloudinary.com/djjoidnbp/image/upload/v1746444989/popup-agency-jJtqDVzozQY-unsplash_nyvcs9.jpg',
-        price: 'USD 7500'
+        price: 'USD 7500',
+        icons: [
+            { path: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z', title: 'Flight Included' },
+            { path: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', title: 'Hotel Stay' },
+            { path: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', title: 'Travel Insurance' },
+            { path: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z', title: 'Guided Tours' }
+        ]
     },
     {
         slug: 'qatar-family-package',
         title: 'Qatar Family Package',
         description: 'Discover the wonders of modern Qatar',
         image: 'https://res.cloudinary.com/djjoidnbp/image/upload/v1746445727/hongbin-1UF8ddEalwk-unsplash_mwqomm.jpg',
-        price: 'USD 7800'
+        price: 'USD 7800',
+        icons: [
+            { path: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z', title: 'Flight Included' },
+            { path: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', title: 'Hotel Stay' },
+            { path: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', title: 'Travel Insurance' },
+            { path: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z', title: 'Guided Tours' }
+        ]
     },
     {
         slug: 'kenya-family-package',
         title: 'Kenya Family Package',
         description: 'Explore Mombasa and Nairobi\'s rich culture',
         image: 'https://media.istockphoto.com/id/2070262465/photo/skyline-of-nairobi-east-with-ngara-district.webp?a=1&b=1&s=612x612&w=0&k=20&c=sWYoNpIT4lxt6utSDPlrPo0LOFnWo2EuxJq6QT_HfPw=',
-        price: 'USD 1775'
+        price: 'USD 1775',
+        icons: [
+            { path: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z', title: 'Flight Included' },
+            { path: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', title: 'Hotel Stay' },
+            { path: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: '24/7 Support' },
+            { path: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z', title: 'Safari Tours' }
+        ]
     },
     {
         slug: 'odyssey-of-the-seas',
         title: 'Odyssey of the Seas',
         description: 'Experience luxury cruising at its finest',
         image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1000&auto=format&fit=crop',
-        price: 'USD 1670'
+        price: 'USD 1670',
+        icons: [
+            { path: 'M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z', title: 'Cruise Experience' },
+            { path: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', title: 'Cabin Stay' },
+            { path: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: '24/7 Service' },
+            { path: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', title: 'Travel Insurance' }
+        ]
     },
     {
         slug: 'zanzibar-tropical-dreams',
         title: 'Tropical Dreams Come True in Zanzibar',
         description: 'Unwind in paradise with this carefully designed 5-day getaway to Zanzibar',
         image: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=1000&auto=format&fit=crop',
-        price: 'From USD 700'
+        price: 'From USD 700',
+        icons: [
+            { path: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z', title: 'Flight Included' },
+            { path: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', title: 'Resort Stay' },
+            { path: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z', title: 'Beach Activities' },
+            { path: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: '24/7 Support' }
+        ]
     },
     {
         slug: 'beat-the-clock-mediterranean',
         title: 'Beat the Clock Mediterranean',
         description: 'Experience the best of Greece and Turkey in this enchanting Mediterranean cruise',
         image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1000&auto=format&fit=crop',
-        price: 'USD 1,422'
+        price: 'USD 1422',
+        icons: [
+            { path: 'M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z', title: 'Cruise Experience' },
+            { path: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', title: 'Cabin Stay' },
+            { path: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z', title: 'Guided Tours' },
+            { path: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', title: 'Travel Insurance' }
+        ]
     },
     {
         slug: 'cape-town-escape',
         title: 'Cape Town Escape: 5 Days of Culture, Coastlines & Adventure',
         description: 'Where city meets nature in perfect harmony',
         image: 'https://images.unsplash.com/photo-1474874055390-459bc92357f3?q=80&w=1000&auto=format&fit=crop',
-        price: 'USD 1670'
+        price: 'USD 630',
+        icons: [
+            { path: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z', title: 'Flight Included' },
+            { path: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', title: 'Hotel Stay' },
+            { path: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z', title: 'City Tours' },
+            { path: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: '24/7 Support' }
+        ]
     }
 ];
 
@@ -162,26 +208,35 @@ const features = [
                     <div class="flex-1 flex flex-col p-4">
                         <h3 class="text-lg font-semibold text-gray-800 mt-2 mb-1">{{ tourPackage.title }}</h3>
                         <p class="text-gray-400 mb-3 leading-relaxed text-sm">{{ tourPackage.description }}</p>
-                        <div class="flex gap-4 justify-center my-3" aria-hidden="true">
-                            <svg class="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                                </path>
-                            </svg>
-                            <svg class="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                            <svg class="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
+                        <div class="flex items-center px-1 py-1.5 gap-2 my-1" aria-label="Package features">
+                            <div v-for="(icon, iconIndex) in tourPackage.icons" :key="iconIndex" 
+                                class="group relative flex items-center" 
+                                @mouseenter="() => showTooltip = iconIndex" 
+                                @mouseleave="() => showTooltip = null">
+                                <div class="h-6 w-6 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-200">
+                                    <svg class="h-3.5 w-3.5 text-blue-600" 
+                                        fill="none" 
+                                        viewBox="0 0 24 24" 
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" 
+                                            stroke-linejoin="round" 
+                                            stroke-width="1.5" 
+                                            :d="icon.path">
+                                        </path>
+                                    </svg>
+                                </div>
+
+                                <!-- Tooltip -->
+                                <div v-show="showTooltip === iconIndex"
+                                    class="absolute -top-8 left-1/2 transform -translate-x-1/2
+                                    px-2.5 py-1 bg-gray-800 text-white text-xs rounded-full
+                                    opacity-0 group-hover:opacity-100 transition-opacity duration-200
+                                    pointer-events-none z-[9999] whitespace-nowrap">
+                                    {{ icon.title }}
+                                </div>
+                            </div>
                         </div>
-                        <div class="border-t border-gray-100 my-4" aria-hidden="true"></div>
+                        <div class="border-t border-gray-100 mt-2 mb-4" aria-hidden="true"></div>
                         <div class="text-center mb-2">
                             <p class="text-gray-500 text-xs font-medium">Starting From</p>
                             <p class="text-xl font-bold text-gray-700">{{ tourPackage.price }}</p>

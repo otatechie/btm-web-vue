@@ -7,7 +7,7 @@ const tourPackages = [
     {
         slug: 'dubai-family-package',
         title: 'Dubai Family Package',
-        description: 'Experience luxury and adventure in the heart of Dubai',
+        description: 'Experience Dubai with your family—luxury stays, desert safaris, and iconic city tours.',
         image: 'https://res.cloudinary.com/djjoidnbp/image/upload/v1746444989/popup-agency-jJtqDVzozQY-unsplash_nyvcs9.jpg',
         price: 'USD 7500',
         icons: [
@@ -20,7 +20,7 @@ const tourPackages = [
     {
         slug: 'qatar-family-package',
         title: 'Qatar Family Package',
-        description: 'Discover the wonders of modern Qatar',
+        description: 'Beachfront luxury in Qatar—desert adventures, cultural tours, and family entertainment.',
         image: 'https://res.cloudinary.com/djjoidnbp/image/upload/v1746445727/hongbin-1UF8ddEalwk-unsplash_mwqomm.jpg',
         price: 'USD 7800',
         icons: [
@@ -33,7 +33,7 @@ const tourPackages = [
     {
         slug: 'kenya-family-package',
         title: 'Kenya Family Package',
-        description: 'Explore Mombasa and Nairobi\'s rich culture',
+        description: 'Safari thrills and beach relaxation in Kenya—perfect blend of wildlife and coastal fun.',
         image: 'https://media.istockphoto.com/id/2070262465/photo/skyline-of-nairobi-east-with-ngara-district.webp?a=1&b=1&s=612x612&w=0&k=20&c=sWYoNpIT4lxt6utSDPlrPo0LOFnWo2EuxJq6QT_HfPw=',
         price: 'USD 1775',
         icons: [
@@ -46,7 +46,7 @@ const tourPackages = [
     {
         slug: 'odyssey-of-the-seas',
         title: 'Odyssey of the Seas',
-        description: 'Experience luxury cruising at its finest',
+        description: 'Mediterranean luxury cruise—iconic ports, world-class dining, and endless entertainment.',
         image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1000&auto=format&fit=crop',
         price: 'USD 1670',
         icons: [
@@ -59,7 +59,7 @@ const tourPackages = [
     {
         slug: 'zanzibar-tropical-dreams',
         title: 'Tropical Dreams Come True in Zanzibar',
-        description: 'Unwind in paradise with this carefully designed 5-day getaway to Zanzibar',
+        description: 'Paradise awaits in Zanzibar—pristine beaches, rich culture, and ocean adventures.',
         image: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=1000&auto=format&fit=crop',
         price: 'From USD 700',
         icons: [
@@ -72,7 +72,7 @@ const tourPackages = [
     {
         slug: 'beat-the-clock-mediterranean',
         title: 'Beat the Clock Mediterranean',
-        description: 'Experience the best of Greece and Turkey in this enchanting Mediterranean cruise',
+        description: 'Greece and Turkey highlights—ancient wonders and island charm on one amazing cruise.',
         image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1000&auto=format&fit=crop',
         price: 'USD 1422',
         icons: [
@@ -85,7 +85,7 @@ const tourPackages = [
     {
         slug: 'cape-town-escape',
         title: 'Cape Town Escape: 5 Days of Culture, Coastlines & Adventure',
-        description: 'Where city meets nature in perfect harmony',
+        description: 'Cape Town\'s finest—Table Mountain, wine country, and coastal beauty in one perfect escape.',
         image: 'https://images.unsplash.com/photo-1474874055390-459bc92357f3?q=80&w=1000&auto=format&fit=crop',
         price: 'USD 630',
         icons: [
@@ -100,7 +100,7 @@ const tourPackages = [
 const destinations = [
     {
         title: 'Tamale',
-        description: 'Northern Ghana\'s vibrant cultural center',
+                  description: 'Northern Ghana\'s vibrant cultural center',
         image: 'https://www.btmghana.net/_app/immutable/assets/tamale.yi4dDZTj.webp',
         badge: 'Cultural Hub',
         tags: ['Cultural Tours', 'Local Markets'],
@@ -201,34 +201,47 @@ const features = [
                     <div class="relative">
                         <img class="w-full h-52 object-cover rounded-t-2xl" :src="tourPackage.image"
                             :alt="tourPackage.title">
-                        <span v-if="tourPackage.badge"
-                            class="absolute top-3 left-3 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow"
-                            aria-hidden="true">{{ tourPackage.badge }}</span>
+                        <!-- Badge: Family Package or Popular -->
+                        <span
+                            v-if="['dubai-family-package', 'qatar-family-package', 'kenya-family-package'].includes(tourPackage.slug)"
+                            class="absolute top-3 left-3 z-10 flex items-center gap-1 bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-medium shadow"
+                            aria-hidden="true">
+                            <svg class="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M5.05 4.05a7 7 0 119.9 9.9l-4.243 4.243a1 1 0 01-1.414 0L5.05 13.95a7 7 0 010-9.9zm4.95 2.45a2 2 0 11-4 0 2 2 0 014 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Family Package
+                        </span>
+                        <span v-else
+                            class="absolute top-3 left-3 z-10 flex items-center gap-1 bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-medium shadow"
+                            aria-hidden="true">
+                            <svg class="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                            </svg>
+                            Popular
+                        </span>
                     </div>
                     <div class="flex-1 flex flex-col p-4">
                         <h3 class="text-lg font-semibold text-gray-800 mt-2 mb-1">{{ tourPackage.title }}</h3>
                         <p class="text-gray-400 mb-3 leading-relaxed text-sm">{{ tourPackage.description }}</p>
                         <div class="flex items-center px-1 py-1.5 gap-2 my-1" aria-label="Package features">
-                            <div v-for="(icon, iconIndex) in tourPackage.icons" :key="iconIndex" 
-                                class="group relative flex items-center" 
-                                @mouseenter="() => showTooltip = iconIndex" 
+                            <div v-for="(icon, iconIndex) in tourPackage.icons" :key="iconIndex"
+                                class="group relative flex items-center" @mouseenter="() => showTooltip = iconIndex"
                                 @mouseleave="() => showTooltip = null">
-                                <div class="h-6 w-6 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-200">
-                                    <svg class="h-3.5 w-3.5 text-blue-600" 
-                                        fill="none" 
-                                        viewBox="0 0 24 24" 
+                                <div
+                                    class="h-6 w-6 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-200">
+                                    <svg class="h-3.5 w-3.5 text-blue-600" fill="none" viewBox="0 0 24 24"
                                         stroke="currentColor">
-                                        <path stroke-linecap="round" 
-                                            stroke-linejoin="round" 
-                                            stroke-width="1.5" 
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                             :d="icon.path">
                                         </path>
                                     </svg>
                                 </div>
 
                                 <!-- Tooltip -->
-                                <div v-show="showTooltip === iconIndex"
-                                    class="absolute -top-8 left-1/2 transform -translate-x-1/2
+                                <div v-show="showTooltip === iconIndex" class="absolute -top-8 left-1/2 transform -translate-x-1/2
                                     px-2.5 py-1 bg-gray-800 text-white text-xs rounded-full
                                     opacity-0 group-hover:opacity-100 transition-opacity duration-200
                                     pointer-events-none z-[9999] whitespace-nowrap">
@@ -303,7 +316,8 @@ const features = [
         <section class="py-16 bg-gray-50" aria-labelledby="features-heading">
             <div class="max-w-5xl mx-auto px-6 sm:px-8">
                 <header class="text-center mb-16">
-                    <h2 id="features-heading" class="text-3xl md:text-4xl font-semibold text-gray-700 mb-4">Why Choose Us
+                    <h2 id="features-heading" class="text-3xl md:text-4xl font-semibold text-gray-700 mb-4">Why Choose
+                        Us
                     </h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">Experience the difference with our premium travel
                         services</p>

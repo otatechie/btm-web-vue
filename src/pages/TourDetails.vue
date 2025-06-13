@@ -13,7 +13,7 @@ const tourPackages = [
     {
         slug: 'dubai-family-package',
         title: 'Dubai Family Package',
-        description: 'Experience luxury and adventure in the heart of Dubai',
+        description: 'Experience the magic of Dubai with your family! This 6-day adventure includes a luxurious stay, thrilling desert safari, iconic city tours, and unforgettable dining experiences—all designed for family fun and comfort.',
         fullDescription: `Embark on an unforgettable family adventure in Dubai, where modern luxury meets Arabian tradition. This carefully curated package includes:
 
 • 5-star luxury hotel accommodation
@@ -30,10 +30,13 @@ const tourPackages = [
             'https://images.unsplash.com/photo-1526495124232-a04e1849168c'
         ],
         price: 'USD 7500',
-        duration: '7 days / 6 nights',
+        duration: '5 nights',
         groupSize: '2-6 people',
         includes: [
-            'All accommodations',
+            'Flight arrangements',
+            'Luxury hotel accommodation',
+            'Private car transfers',
+            'Guided sightseeing tours',
             'Daily breakfast',
             'Selected activities',
             'Airport transfers',
@@ -44,83 +47,142 @@ const tourPackages = [
             'Desert Safari Adventure',
             'Burj Khalifa Experience',
             'Dubai Marina Cruise',
-            'Wild Wadi Water Park'
+            'Wild Wadi Water Park',
+            'Dubai Mall & Aquarium',
+            'Traditional Dinner Experience'
+        ],
+        validityInfo: 'Travel valid throughout the year. Rates subject to availability and may change without prior notice. Rates are per person sharing.',
+        hotelOptions: [
+            {
+                name: 'Burj Al Arab',
+                price: 'USD 8500'
+            },
+            {
+                name: 'Atlantis The Palm',
+                price: 'USD 7500'
+            },
+            {
+                name: 'Jumeirah Beach Hotel',
+                price: 'USD 6500'
+            }
         ]
     },
 
     {
         slug: 'qatar-family-package',
         title: 'Qatar Family Package',
-        description: 'Discover the wonders of modern Qatar',
+        description: 'Treat your family to 5 nights of beachfront bliss in a 5-star seaview chalet. Enjoy a thrilling desert safari, explore Doha\'s top museums, and shop in style. Flights, visa, transfers, and daily breakfast included—plus protocol service for a smooth trip. All for $7,800 per family of 4. Pure comfort, culture, and adventure in one unforgettable getaway!',
         fullDescription: `Experience the perfect blend of tradition and modernity in Qatar. This comprehensive family package includes:
 
-• Luxury hotel stay in Doha
+• 5-star beachfront seaview chalet accommodation
 • Desert safari and dune bashing
 • Dhow cruise with dinner
 • Visit to Museum of Islamic Art
 • Souq Waqif exploration
 • Katara Cultural Village tour
 • The Pearl-Qatar visit
-• All transfers and guided tours`,
+• All transfers and guided tours
+• Protocol service for smooth travel
+• Visa assistance and processing`,
         image: 'https://res.cloudinary.com/djjoidnbp/image/upload/v1746445727/hongbin-1UF8ddEalwk-unsplash_mwqomm.jpg',
         gallery: [
             'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46',
             'https://images.unsplash.com/photo-1565849980697-25ef80573146'
         ],
         price: 'USD 7800',
-        duration: '6 days / 5 nights',
-        groupSize: '2-8 people',
+        duration: '5 nights',
+        groupSize: 'Family of 4',
         includes: [
-            'Luxury accommodation',
+            'Flight arrangements',
+            '5-star beachfront accommodation',
+            'Private car transfers',
+            'Guided sightseeing tours',
             'Daily breakfast',
             'Desert safari',
             'Cultural tours',
+            'Visa assistance',
+            'Protocol service',
             'Airport transfers',
             'Expert guide'
         ],
         highlights: [
-            'Desert Adventure',
-            'Cultural Heritage',
-            'Modern Architecture',
-            'Local Cuisine'
+            'Beachfront Seaview Chalet',
+            'Desert Safari Adventure',
+            'Cultural Heritage Tours',
+            'Museum of Islamic Art',
+            'Souq Waqif Experience',
+            'The Pearl-Qatar Visit'
+        ],
+        validityInfo: 'Travel valid throughout the year. Package price is for a family of 4. Rates subject to availability and may change without prior notice.',
+        hotelOptions: [
+            {
+                name: 'Seaview Chalet - Premium',
+                price: 'USD 7800'
+            },
+            {
+                name: 'Seaview Chalet - Deluxe',
+                price: 'USD 8500'
+            }
         ]
     },
 
     {
         slug: 'kenya-family-package',
-        title: 'Kenya Family Package',
-        description: 'Explore Mombasa and Nairobi\'s rich culture',
+        title: 'Kenya Family Package (Mombasa and Nairobi)',
+        description: 'Explore wild Nairobi and sunny Mombasa in 6 unforgettable days. Safari at Nairobi National Park, feed giraffes, feast at Carnivore, snorkel with dolphins, and splash around Wild Waters Mombasa. Flights, hotels, meals & transfers—all covered. Just pack your bags and make memories that last a lifetime!',
         fullDescription: `Discover the magic of Kenya with this family-friendly adventure package. Experience includes:
 
 • Mixed accommodation in Nairobi and Mombasa
 • Nairobi National Park safari
 • Giraffe Centre visit
+• Carnivore Restaurant experience
 • Mombasa Old Town tour
-• Beach activities
+• Dolphin snorkeling adventure
+• Wild Waters Mombasa entry
 • Fort Jesus exploration
 • Traditional dinner experiences
-• Cultural village visits`,
+• Cultural village visits
+• All meals included
+• Private transfers throughout`,
         image: 'https://media.istockphoto.com/id/2070262465/photo/skyline-of-nairobi-east-with-ngara-district.webp?a=1&b=1&s=612x612&w=0&k=20&c=sWYoNpIT4lxt6utSDPlrPo0LOFnWo2EuxJq6QT_HfPw=',
         gallery: [
             'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e',
             'https://images.unsplash.com/photo-1523805009345-7448845a9e53'
         ],
         price: 'USD 1775',
-        duration: '8 days / 7 nights',
+        duration: '5 nights',
         groupSize: '2-10 people',
         includes: [
-            'Mixed accommodation',
+            'Flight arrangements',
+            'Mixed accommodation in Nairobi and Mombasa',
+            'Private car transfers',
+            'Guided sightseeing tours',
             'Safari experience',
             'Cultural tours',
             'Beach activities',
+            'All meals included',
             'Local transport',
-            'Some meals'
+            'Park entrance fees',
+            'Activity fees'
         ],
         highlights: [
-            'Wildlife Safari',
-            'Beach Experience',
-            'Cultural Tours',
-            'City Exploration'
+            'Nairobi National Park Safari',
+            'Giraffe Centre Visit',
+            'Carnivore Restaurant Experience',
+            'Dolphin Snorkeling',
+            'Wild Waters Mombasa',
+            'Fort Jesus Exploration'
+        ],
+        validityInfo: 'Travel valid throughout the year. Rates subject to availability and may change without prior notice. Rates are per person sharing.',
+        hotelOptions: [
+            {
+                name: 'Nairobi - Sarova Stanley',
+                price: 'USD 1775'
+            },
+            {
+                name: 'Mombasa - Voyager Beach Resort',
+                price: 'USD 1775'
+            }
         ]
     },
     {
@@ -343,7 +405,7 @@ watchEffect(() => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Breadcrumb -->
             <nav class="flex my-8" aria-label="Breadcrumb">
-                <ol class="flex items-center space-x-1" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <ol class="flex items-center" itemscope itemtype="https://schema.org/BreadcrumbList">
                     <li class="flex items-center" itemprop="itemListElement" itemscope
                         itemtype="https://schema.org/ListItem">
                         <a href="/"
@@ -405,8 +467,18 @@ watchEffect(() => {
                         <div class="flex items-center gap-4 mb-4">
                             <span class="px-2 py-1 bg-blue-600/90 text-white rounded-full text-xs font-medium">{{
                                 tour.duration }}</span>
-                            <span class="px-2 py-1 bg-blue-600/90 text-white rounded-full text-xs font-medium">{{
-                                tour.groupSize }}</span>
+                            <span v-if="['dubai-family-package', 'qatar-family-package', 'kenya-family-package'].includes(tour.slug)" class="flex items-center gap-1 bg-white text-blue-600 px-2 py-1 rounded-full text-xs font-medium">
+                                <svg class="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9l-4.243 4.243a1 1 0 01-1.414 0L5.05 13.95a7 7 0 010-9.9zm4.95 2.45a2 2 0 11-4 0 2 2 0 014 0z" clip-rule="evenodd" />
+                                </svg>
+                                Family Package
+                            </span>
+                            <span v-else class="flex items-center gap-1 bg-white text-blue-600 px-2 py-1 rounded-full text-xs font-medium">
+                                <svg class="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.385-2.46a1 1 0 00-1.175 0l-3.385 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                                </svg>
+                                Popular
+                            </span>
                         </div>
                         <h1 class="text-4xl font-bold text-white mb-4 leading-tight">{{ tour.title }}</h1>
                         <p class="text-lg text-white/90 max-w-3xl">{{ tour.description }}</p>
@@ -417,16 +489,104 @@ watchEffect(() => {
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Main Content -->
                 <div class="lg:col-span-2 space-y-8">
-                    <!-- Tour Description -->
+                    <!-- Tour Overview -->
                     <div class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
                         <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                             <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            Tour Overview
+                            Overview
                         </h2>
-                        <p class="text-gray-600 whitespace-pre-line leading-relaxed">{{ tour.fullDescription }}</p>
+                        <p class="text-gray-600 whitespace-pre-line leading-relaxed">{{ tour.description }}</p>
+                        <p class="text-gray-600 whitespace-pre-line leading-relaxed mt-4">{{ tour.fullDescription }}</p>
+                    </div>
+
+                    <!-- Itinerary -->
+                    <div class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Itinerary
+                        </h2>
+                        <div class="space-y-6">
+                            <div v-for="(highlight, index) in tour.highlights" :key="highlight"
+                                class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="text-blue-600 font-semibold">{{ index + 1 }}</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">{{ highlight }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inclusions -->
+                    <div class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Inclusions
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div v-for="item in tour.includes" :key="item"
+                                class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700">{{ item }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms & Conditions -->
+                    <div class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Terms & Conditions
+                        </h2>
+                        <div class="space-y-6">
+                            <!-- Validity Information -->
+                            <div v-if="tour.validityInfo" class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="font-semibold text-gray-900 mb-3">Validity</h3>
+                                <p class="text-gray-600">{{ tour.validityInfo }}</p>
+                            </div>
+
+                            <!-- Hotel Options -->
+                            <div v-if="tour.hotelOptions" class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="font-semibold text-gray-900 mb-3">Accommodation Options</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div v-for="hotel in tour.hotelOptions" :key="hotel.name"
+                                        class="flex justify-between items-center p-3 bg-white rounded">
+                                        <span class="text-gray-700">{{ hotel.name }}</span>
+                                        <span class="text-blue-600 font-semibold">{{ hotel.price }}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- General Terms -->
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="font-semibold text-gray-900 mb-3">General Terms</h3>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                    <li>All prices are subject to availability and may change without prior notice</li>
+                                    <li>Prices are per person sharing unless otherwise stated</li>
+                                    <li>Booking confirmation is subject to availability at the time of booking</li>
+                                    <li>Special requests are subject to availability and cannot be guaranteed</li>
+                                    <li>Travel insurance is recommended for all travelers</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Gallery -->
@@ -448,65 +608,6 @@ watchEffect(() => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Highlights -->
-                    <div class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                            </svg>
-                            Tour Highlights
-                        </h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div v-for="highlight in tour.highlights" :key="highlight"
-                                class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
-                                <div class="flex items-center gap-3 text-gray-700">
-                                    <div
-                                        class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                                        <svg class="h-5 w-5 text-blue-600" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span class="font-medium">{{ highlight }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hotel Options -->
-                    <div v-if="tour.hotelOptions"
-                        class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                            </svg>
-                            Accommodation Options
-                        </h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div v-for="hotel in tour.hotelOptions" :key="hotel.name"
-                                class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
-                                <h3 class="font-semibold text-lg text-gray-900 mb-2">{{ hotel.name }}</h3>
-                                <p class="text-blue-600 font-semibold">{{ hotel.price }}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Validity Information -->
-                    <div v-if="tour.validityInfo"
-                        class="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            Validity & Terms
-                        </h2>
-                        <p class="text-gray-600 whitespace-pre-line leading-relaxed">{{ tour.validityInfo }}</p>
                     </div>
                 </div>
 
